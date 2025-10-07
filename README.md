@@ -58,7 +58,10 @@ A proposta é criar uma **landing page moderna** para apresentar minha trajetór
 
 ## Status do Projeto  
 
->  Em desenvolvimento — primeiras versões da landing page estão sendo estruturadas.  
+>  Em desenvolvimento — primeiras versões da landing page estão sendo estruturadas.
+>  Base do projeto criada — seções início, sobre mim e projetos criada.
+>  Na seção de ínicio foi usada uma animação para deixar o portifólio mais atrativo.
+> Pensei também em colocar algumas animações na seção sobre mim para melhorar a fluidez.
 
 ---
  
