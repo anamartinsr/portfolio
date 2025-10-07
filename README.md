@@ -1,43 +1,43 @@
-# Portfólio | Ana Paula Martins | Planejamento Inicial 
+# Portfólio 
 
-Este projeto é o meu portfólio profissional, desenvolvido com foco em **performance**, **animações fluidas** e **design responsivo**.  
-A proposta é criar uma **landing page moderna** para apresentar minha trajetória, projetos e habilidades técnicas de forma interativa.  
-
----
-
-## Estrutura da Landing Page  
-
-- **Início** → Seção de boas-vindas com destaque visual.  
-- **Sobre** → Breve descrição da minha jornada e perfil profissional.  
-- **Projetos** → Showcase interativo dos principais trabalhos.  
-- **Experiências** *(em estudo)* → Linha do tempo ou cards com experiências profissionais.  
+Este é o meu portfólio profissional, desenvolvido com foco em **performance**, **animações suaves** e **design responsivo**.  
+A landing page foi criada para apresentar minha trajetória, projetos e habilidades técnicas de forma interativa e moderna.
 
 ---
 
-## Paleta de Cores  
+## Estrutura da Landing Page
 
-| Cor       | Hex     |
-|-----------|---------|
-| Roxo      | `#5223FF` |
-| Preto     | `#000000` |
-| Roxo Escuro 1 | `#693B93` |
-| Roxo Escuro 2 | `#130428` |
-| Roxo Escuro 3 | `#251043` |
-| Roxo Escuro 4 | `#261045` |
-| Roxo Escuro 5 | `#190634` |
+- **Início** → Seção de boas-vindas com animação e destaque visual.  
+- **Sobre** → Apresenta minha jornada profissional e perfil.  
+- **Projetos** → Showcase interativo dos principais trabalhos desenvolvidos.  
+- **Experiências** → Linha do tempo ou cards com experiências profissionais detalhadas.  
 
 ---
 
-## Tecnologias Utilizadas  
+## Paleta de Cores
+
+| Cor          | Hex       |
+|--------------|-----------|
+| Roxo         | `#5223FF` |
+| Preto        | `#000000` |
+| Roxo Escuro 1| `#693B93` |
+| Roxo Escuro 2| `#130428` |
+| Roxo Escuro 3| `#251043` |
+| Roxo Escuro 4| `#261045` |
+| Roxo Escuro 5| `#190634` |
+
+---
+
+## Tecnologias Utilizadas
 
 - **[JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)** – Linguagem principal do projeto  
-- **[React](https://react.dev/)** – Biblioteca para construção da interface  
+- **[React](https://react.dev/)** – Construção da interface interativa  
 - **[Vite](https://vitejs.dev/)** – Build tool rápida e moderna  
 - **[TailwindCSS](https://tailwindcss.com/)** – Estilização responsiva e utilitária  
-- **[Motion/React](https://motion.dev/)** – Animações suaves e performáticas  
+- **[Framer Motion](https://www.framer.com/motion/)** – Animações suaves e performáticas  
 - **[Three.js](https://threejs.org/)** – Gráficos 3D na web  
 - **[OGL](https://github.com/oframe/ogl)** – WebGL minimalista para efeitos visuais avançados  
-- **[React Bits](https://reactbits.dev/)** – Coleção de componentes otimizados para React  
+- **[React Bits](https://reactbits.dev/)** – Componentes otimizados para React  
 - **[Husky](https://typicode.github.io/husky/)** – Automação de Git hooks (ex: lint antes de commit)  
 - **[ESLint](https://eslint.org/)** – Padrões de código e boas práticas  
 - **[GitHub Actions](https://github.com/features/actions)** – Integração contínua e automação de workflows  
@@ -45,23 +45,22 @@ A proposta é criar uma **landing page moderna** para apresentar minha trajetór
 
 ---
 
-## Funcionalidades Planejadas  
+## Funcionalidades
 
--  Animações fluidas em transições de seções  
--  Layout totalmente responsivo  
--  Componentização e reutilização com React  
--  Estilo consistente com **Tailwind** e paleta definida  
--  Code quality garantida com **ESLint + Husky**  
--  Deploy contínuo com **Vercel + GitHub Actions**  
+- Layout totalmente responsivo  
+- Animações suaves em todas as seções  
+- Componentização e reutilização de código com React  
+- Estilo consistente com **Tailwind** e paleta de cores definida  
+- Code quality garantida com **ESLint + Husky**  
+- Deploy contínuo com **Vercel**  
 
 ---
 
-## Status do Projeto  
+## Status do Projeto
 
->  Em desenvolvimento — primeiras versões da landing page estão sendo estruturadas.
->  Base do projeto criada — seções início, sobre mim e projetos criada.
->  Na seção de ínicio foi usada uma animação para deixar o portifólio mais atrativo.
-> Pensei também em colocar algumas animações na seção sobre mim para melhorar a fluidez.
+> ✅ Projeto finalizado e funcional.  
+> Todas as seções (**Início**, **Sobre**, **Projetos** e **Experiências**) estão implementadas com animações e interatividade.  
+
 
 ---
  
