@@ -16,7 +16,7 @@ const experiences = [
       "Realizo deploy e atualizações em servidores Nginx, configurando ambientes estáveis e pipelines de entrega contínua para integração e publicação de aplicações.",
       "Desenvolvi integrações com APIs externas usando Node.js, que se tornaram padrões internos para novas implementações, otimizando o tempo de desenvolvimento e reduzindo retrabalho.",
       "Liderei a transformação de dashboards Power BI em aplicações web completas, criando APIs em Node.js e interfaces em React, com foco em acessibilidade, usabilidade e visualização eficiente de dados.",
-      "Projetei e implementei um sistema completo com Node.js, Express, MySQL e React, responsável por gerenciar cadastros, solicitações e históricos de forma automatizada. O projeto envolveu modelagem de dados, definição de regras de negócio, fluxos de aprovação, autenticação e geração de relatórios, garantindo alta escalabilidade e manutenibilidade.",
+      "Projetei e implementei um sistema completo com Node.js, Express, MySQL e React. O projeto envolveu modelagem de dados, definição de regras de negócio, fluxos de aprovação, autenticação e geração de relatórios, garantindo alta escalabilidade e manutenibilidade.",
       "No dia a dia, aplicamos metodologias ágeis, como Kanban, para otimizar o fluxo de trabalho, acompanhar entregas e promover colaboração entre equipes e colaboradores."
     ],
     technologies: [
@@ -125,4 +125,5 @@ const experiences = [
     </section>
   );
 };
+
 
