@@ -65,8 +65,8 @@ function ProjectCard({ project, reverse }) {
                 href={project.codeLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-transparent border border-[var(--primary-color)] text-[var(--primary-color)] rounded-md
-                           hover:bg-[var(--primary-color)] hover:text-black transition duration-300 ease-in-out transform hover:scale-105 shadow-sm"
+                className="flex items-center gap-2 px-4 py-2 bg-(--primary-color)/50 text-(--white) rounded-md
+                           hover:bg-(--white) hover:text-(--primary-color) transitiond transform hover:scale-105 shadow-sm"
               >
                 <SiGithub />
                 Ver código
@@ -77,8 +77,8 @@ function ProjectCard({ project, reverse }) {
                 href={project.projectLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-transparent border border-[var(--primary-color)] text-[var(--primary-color)] rounded-md
-                           hover:bg-[var(--primary-color)] hover:text-black transition duration-300 ease-in-out transform hover:scale-105 shadow-sm"
+                className="flex items-center gap-2 px-4 py-2 bg-(--primary-color)/50 text-(--white) rounded-md
+                           hover:bg-(--white) hover:text-(--primary-color) transitiond transform hover:scale-105 shadow-sm"
               >
                 <FiGlobe />
                 Ver projeto
