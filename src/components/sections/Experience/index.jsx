@@ -110,7 +110,7 @@ export default function Experience() {
                       {exp.technologies.map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="px-3 py-1 text-xs font-medium bg-(--primary-color)/10 text-(--white) rounded-full border"
+                          className="px-3 py-1 text-xs font-medium bg-(--primary-color)/50 text-(--white) rounded-full border"
                         >
                           {tech}
                         </span>

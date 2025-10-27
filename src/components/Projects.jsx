@@ -15,9 +15,20 @@ const projects = [
   },
   {
     title: "Api de Agendamento de Consultas",
-    description: "API desenvolvida para gerenciar o agendamento de consultas, integração de disponibilidade, histórico e notificações por e-mail, com foco em escalabilidade, segurança e manutenibilidade. O projeto foi inicialmente criado como um ambiente de aprendizado, utilizando Prisma, MongoDB, JWT e Nodemailer, e está evoluindo para uma arquitetura robusta seguindo boas práticas de mercado.",
+    description:
+      "API desenvolvida para gerenciar o agendamento de consultas, integração de disponibilidade, histórico e notificações por e-mail, com foco em escalabilidade, segurança e manutenibilidade. O projeto foi inicialmente criado como um ambiente de aprendizado, utilizando Prisma, MongoDB, JWT e Nodemailer, e está evoluindo para uma arquitetura robusta seguindo boas práticas de mercado.",
     img: ApiAgendamento,
-    techs: ["Express", "PostgreSQL", "Node.js", "Prisma", "JWT", "Swagger", "Husky", "CI/CD", "Docker"],
+    techs: [
+      "Express",
+      "PostgreSQL",
+      "Node.js",
+      "Prisma",
+      "JWT",
+      "Swagger",
+      "Husky",
+      "CI/CD",
+      "Docker",
+    ],
     codeLink: "https://github.com/anamartinsr/agendamento_consultas_api",
   },
 ];
@@ -44,7 +55,9 @@ function ProjectCard({ project, reverse }) {
         <h3 className="text-3xl font-bold text-white">{project.title}</h3>
 
         <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 shadow-lg max-w-md mx-auto text-center space-y-4">
-          <p className="text-gray-200 text-sm leading-relaxed">{project.description}</p>
+          <p className="text-gray-200 text-sm leading-relaxed">
+            {project.description}
+          </p>
 
           <div className="flex justify-center gap-4 mt-2">
             {project.codeLink && (
@@ -78,7 +91,7 @@ function ProjectCard({ project, reverse }) {
           {project.techs.map((tech, idx) => (
             <span
               key={idx}
-              className="px-3 py-1 text-xs font-medium bg-[var(--primary-color)]/10 text-[var(--primary-color)] rounded-full border border-[var(--primary-color)]"
+              className="px-3 py-1 text-xs font-medium bg-(--primary-color)/50 text-(--white) rounded-full"
             >
               {tech}
             </span>
