@@ -1,42 +1,48 @@
-import { Calendar, MapPin, ArrowRight } from 'lucide-react';
-import { Card, CardContent } from './CardExperience';
+import { Calendar, MapPin, ArrowRight } from "lucide-react";
+import { Card, CardContent } from "./CardExperience";
 
-export default function Experience () {
-const experiences = [
-  {
-    title: "Desenvolvedora Full Stack Júnior",
-    company: "CIEEMG",
-    period: "Jun 2024 - Presente",
-    location: "Presencial",
-   description:
-      "Atuo no desenvolvimento e manutenção de sistemas internos, com foco em arquitetura backend, integração entre serviços e entregas escaláveis que atendem às regras de negócio da organização.",
-    achievements: [
-      "Criei APIs REST do zero utilizando Node.js, Express e MySQL, aplicando boas práticas de versionamento, autenticação e documentação técnica com Swagger.",
-      "Participo da organização e padronização dos projetos, conduzindo code reviews e definindo estruturas arquiteturais para garantir consistência, qualidade e manutenção a longo prazo.",
-      "Realizo deploy e atualizações em servidores Nginx, configurando ambientes estáveis e pipelines de entrega contínua para integração e publicação de aplicações.",
-      "Desenvolvi integrações com APIs externas usando Node.js, que se tornaram padrões internos para novas implementações, otimizando o tempo de desenvolvimento e reduzindo retrabalho.",
-      "Liderei a transformação de dashboards Power BI em aplicações web completas, criando APIs em Node.js e interfaces em React, com foco em acessibilidade, usabilidade e visualização eficiente de dados.",
-      "Projetei e implementei um sistema completo com Node.js, Express, MySQL e React. O projeto envolveu modelagem de dados, definição de regras de negócio, fluxos de aprovação, autenticação e geração de relatórios, garantindo alta escalabilidade e manutenibilidade.",
-      "No dia a dia, aplicamos metodologias ágeis, como Kanban, para otimizar o fluxo de trabalho, acompanhar entregas e promover colaboração entre equipes e colaboradores."
-    ],
-    technologies: [
-      "Node.js",
-      "TypeScript",
-      "Express",
-      "React",
-      "MySQL",
-      "PostgreSQL",
-      "MongoDB",
-      "Docker",
-      "Swagger",
-      "JavaScript",
-      "Nginx",
-      "Linux",
-      "CI/CD"
-    ]
-  }
-];
-
+export default function Experience() {
+  const experiences = [
+    {
+      title: "Desenvolvedora Full Stack Júnior",
+      company: "CIEEMG",
+      period: "Jun 2024 - Presente",
+      location: "Presencial",
+      description:
+        "Atuo no desenvolvimento e evolução de sistemas internos, com foco em arquitetura backend, integrações entre serviços, automação de deploys e implementação de APIs escaláveis que sustentam os processos e regras de negócio da organização..",
+      achievements: [
+        "Desenvolvi APIs REST com Node.js, Express e MySQL e documentação com Swagger.",
+        "Participo da padronização dos projetos e conduzo code reviews para garantir qualidade e consistência.",
+        "Realizo deploys e atualizações em servidores Nginx, configurando ambientes e pipelines de entrega contínua.",
+        "Implementei integrações com APIs externas em Node.js, criando padrões internos e otimizando o desenvolvimento.",
+        "Projetei um sistema completo com Node.js, Express, MySQL e React, envolvendo regras de negócio e relatórios escaláveis.",
+        "Aplicamos metodologias ágeis, como Kanban, para otimizar o fluxo e promover colaboração entre equipes.",
+      ],
+      technologies: [
+        "Node.js",
+        "TypeScript",
+        "Express",
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "Docker",
+        "Swagger",
+        "JavaScript",
+        "Nginx",
+        "Linux",
+        "CI/CD",
+        "APIs REST",
+        "Arquitetura de projetos",
+        "Integrações de APIs",
+        "Modelagem de banco de dados",
+        "React",
+        "Tailwind CSS",
+        "Metodologias Ágeis",
+        "Git e GitHub",
+        "Microserviços",
+      ],
+    },
+  ];
 
   return (
     <section id="experience" className="py-20 ">
@@ -53,16 +59,11 @@ const experiences = [
 
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <Card 
-                key={index}
-                className="glass-card p-6"
-              >
+              <Card key={index} className="glass-card p-6">
                 <CardContent className="p-8">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                     <div className="mb-4 md:mb-0">
-                      <h3 className="text-2xl font-bold  mb-2">
-                        {exp.title}
-                      </h3>
+                      <h3 className="text-2xl font-bold  mb-2">{exp.title}</h3>
                       <h4 className="text-lg text-(--primary-color) font-medium mb-2">
                         {exp.company}
                       </h4>
@@ -70,7 +71,7 @@ const experiences = [
                         {exp.description}
                       </p>
                     </div>
-                    
+
                     <div className="flex flex-col md:items-end space-y-2 text-sm text-muted-foreground">
                       <div className="flex items-center">
                         <Calendar className="h-4 mr-2" />
@@ -90,7 +91,7 @@ const experiences = [
                     </h5>
                     <ul className="space-y-2">
                       {exp.achievements.map((achievement, achievementIndex) => (
-                        <li 
+                        <li
                           key={achievementIndex}
                           className="text-muted-foreground flex items-start"
                         >
@@ -107,9 +108,9 @@ const experiences = [
                     </h5>
                     <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech, techIndex) => (
-                        <span 
+                        <span
                           key={techIndex}
-                          className="px-3 py-1 text-xs font-medium bg-(--primary-color)/10 text-(--primary-color) rounded-full border"
+                          className="px-3 py-1 text-xs font-medium bg-(--primary-color)/10 text-(--white) rounded-full border"
                         >
                           {tech}
                         </span>
@@ -124,6 +125,4 @@ const experiences = [
       </div>
     </section>
   );
-};
-
-
+}
