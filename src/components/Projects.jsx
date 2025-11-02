@@ -49,9 +49,6 @@ function ProjectCard({ project, reverse }) {
       </div>
 
       <div className="space-y-4">
-        <p className="text-sm uppercase text-[var(--primary-color)] font-semibold">
-          Project
-        </p>
         <h3 className="text-3xl font-bold text-white">{project.title}</h3>
 
         <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 shadow-lg max-w-md mx-auto text-center space-y-4">
@@ -81,7 +78,7 @@ function ProjectCard({ project, reverse }) {
                            hover:bg-(--white) hover:text-(--primary-color) transitiond transform hover:scale-105 shadow-sm"
               >
                 <FiGlobe />
-                Ver projeto
+                Ver site
               </a>
             )}
           </div>
@@ -105,6 +102,10 @@ function ProjectCard({ project, reverse }) {
 export default function Projects() {
   return (
     <section id="projects" className="relative bg-black py-20 px-6 md:px-16">
+      <h2 className="text-5xl text-center md:text-6xl font-bold mb-12">
+        <span className="text-gradient">Projetos</span>
+      </h2>
+
       <div className="max-w-6xl mx-auto space-y-24">
         {projects.map((project, idx) => (
           <ProjectCard key={idx} project={project} reverse={idx % 2 !== 0} />
