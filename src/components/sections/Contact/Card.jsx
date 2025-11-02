@@ -37,7 +37,7 @@ export default function Card() {
                    from-primary via-accent to-primary-glow scale-x-0 
                    group-hover:scale-x-100 transition-transform duration-700 origin-left"
       />
-      
+
       <div className="space-y-8 w-full mt-6">
         {contactInfo.map((info, index) => (
           <div
@@ -53,9 +53,15 @@ export default function Card() {
                 {info.icon}
               </div>
               <div className="space-y-1">
-                <h4 className="font-semibold text-lg text-foreground">{info.title}</h4>
-                <p className="text-primary font-medium break-words">{info.value}</p>
-                <p className="text-sm text-muted-foreground">{info.description}</p>
+                <h4 className="font-semibold text-lg text-foreground">
+                  {info.title}
+                </h4>
+                <p className="text-primary font-medium break-words">
+                  {info.value}
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  {info.description}
+                </p>
               </div>
             </div>
           </div>

@@ -2,7 +2,6 @@ import { Mail, Linkedin, Github, ArrowUp } from "lucide-react";
 import SocialLink from "../ui/SocialLink";
 import ScrollToSection from "../../utils/scroll";
 
-
 export default function Footer() {
   return (
     <footer className="bg-black text-gray-400 py-8 border-t border-gray-800 relative">
