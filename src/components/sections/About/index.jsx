@@ -24,10 +24,9 @@ Sigo aprendendo, evoluindo e compartilhando conhecimento, sempre em busca de ent
           <div className="lg:w-1/2 space-y-6">
             <GlassCard
               title="Experiência Técnica"
-              text="Tenho sólida experiência no desenvolvimento de sistemas back-end, atuando desde a modelagem de dados até a entrega e manutenção de aplicações em produção.
-Domino a criação de APIs REST escaláveis com Node.js, Express e MySQL, aplicando princípios de arquitetura limpa, autenticação segura e documentação com Swagger.
-Possuo conhecimento em Docker, CI/CD e deploy em servidores Nginx, garantindo entregas automatizadas e ambientes consistentes.
-Também atuo com integração entre serviços, otimização de performance e padronização de código, contribuindo para a qualidade técnica e evolução contínua dos projetos."
+              text="Tenho sólida experiência no desenvolvimento de sistemas, atuando desde a modelagem de dados até a entrega e manutenção de aplicações em produção.
+Domino a criação de APIs escaláveis aplicando princípios de arquitetura limpa, autenticação segura e documentação.
+"
             />
 
             <GlassCard
