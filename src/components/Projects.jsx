@@ -2,8 +2,30 @@ import { SiGithub } from "react-icons/si";
 import { FiGlobe } from "react-icons/fi";
 import Tecnologym from "../assets/tecnologym.png";
 import ApiAgendamento from "../assets/agendamento.png";
+import UrlShortener from "../assets/url_shortener.png";
 
 const projects = [
+  {
+    title: "URL Shortener (100k+ URLs)",
+    description:
+      "Gerador de URLs escalável, capaz de processar até 100 milhões de encurtamentos por dia, desenvolvido com Node.js, TypeScript, Redis, Cassandra e Docker, aplicando princípios de Clean Architecture e System Design. O projeto inclui testes automatizados com Jest e Supertest, além de documentação via Swagger.",
+    img: UrlShortener,
+    techs: [
+      "Clean Architecture",
+      "TypeScript",
+      "Redis",
+      "Cassandra",
+      "Docker",
+      "Node.js",
+      "Express",
+      "Swagger",
+      "Jest",
+      "Supertest",
+      "System Design",
+      "Joi",
+    ],
+    codeLink: "https://github.com/anamartinsr/url_shortener",
+  },
   {
     title: "Technology Gym",
     description:
@@ -16,7 +38,7 @@ const projects = [
   {
     title: "Api de Agendamento de Consultas",
     description:
-      "API desenvolvida para gerenciar o agendamento de consultas, integração de disponibilidade, histórico e notificações por e-mail, com foco em escalabilidade, segurança e manutenibilidade. O projeto foi inicialmente criado como um ambiente de aprendizado, utilizando Prisma, MongoDB, JWT e Nodemailer, e está evoluindo para uma arquitetura robusta seguindo boas práticas de mercado.",
+      "API desenvolvida para gerenciar o agendamento de consultas, integração de disponibilidade, histórico e notificações por e-mail, com foco em escalabilidade, segurança e manutenibilidade. Utiliza Node.js, Express, PostgreSQL e Prisma, seguindo princípios de Clean Architecture e boas práticas de desenvolvimento.",
     img: ApiAgendamento,
     techs: [
       "Express",
