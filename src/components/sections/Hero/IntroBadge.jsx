@@ -5,7 +5,7 @@ export default function IntroBadge() {
         <h1 className="text-(--white)">HELLO</h1>
       </span>
 
-      <p className="text-(--white)">I' am</p>
+      <p className="text-(--white)">I&apos; am</p>
     </div>
   );
 }
