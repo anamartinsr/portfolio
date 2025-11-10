@@ -68,7 +68,7 @@ Domino a criação de APIs escaláveis aplicando princípios de arquitetura limp
         <div className="mt-20 text-center">
           <StatsGroup
             items={[
-              { value: "1+", label: "Anos de experiência" },
+              { value: "2+", label: "Anos de experiência" },
               { value: "7+", label: "Projetos entregues" },
               { value: "∞", label: "Aprendizado contínuo" },
             ]}
