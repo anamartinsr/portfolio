@@ -9,7 +9,6 @@ export default function Contact() {
             Vamos Conversar?
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Estou sempre aberta a novas oportunidades e projetos interessantes.
             Entre em contato e vamos criar algo incrível juntos!
           </p>
         </div>

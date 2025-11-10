@@ -1,23 +1,15 @@
-import { Calendar, MapPin, ArrowRight } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { Card, CardContent } from "./CardExperience";
+import Activities from "./ActivitiesSection";
 
 export default function Experience() {
   const experiences = [
     {
-      title: "Desenvolvedora Full Stack Júnior",
+      title: "Desenvolvedora Full Stack",
       company: "CIEEMG",
       period: "Jun 2024 - Presente",
-      location: "Presencial",
       description:
-        "Atuo no desenvolvimento e evolução de sistemas internos, com foco em arquitetura backend, integrações entre serviços, automação de deploys e implementação de APIs escaláveis que sustentam os processos e regras de negócio da organização..",
-      achievements: [
-        "Desenvolvi APIs REST com Node.js, Express e MySQL e documentação com Swagger.",
-        "Participo da padronização dos projetos e conduzo code reviews para garantir qualidade e consistência.",
-        "Realizo deploys e atualizações em servidores Nginx, configurando ambientes e pipelines de entrega contínua.",
-        "Implementei integrações com APIs externas em Node.js, criando padrões internos e otimizando o desenvolvimento.",
-        "Projetei um sistema completo com Node.js, Express, MySQL e React, envolvendo regras de negócio e relatórios escaláveis.",
-        "Aplicamos metodologias ágeis, como Kanban, para otimizar o fluxo e promover colaboração entre equipes.",
-      ],
+        "Responsável pela arquitetura, desenvolvimento e evolução de sistemas internos, com foco em backend, automação e integrações entre serviços.",
       technologies: [
         "Node.js",
         "TypeScript",
@@ -33,6 +25,7 @@ export default function Experience() {
         "CI/CD",
         "APIs REST",
         "Arquitetura de projetos",
+        "Design System",
         "Integrações de APIs",
         "Modelagem de banco de dados",
         "React",
@@ -45,7 +38,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-20 ">
+    <section id="experience" className="py-8">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
@@ -77,29 +70,7 @@ export default function Experience() {
                         <Calendar className="h-4 mr-2" />
                         {exp.period}
                       </div>
-                      <div className="flex items-center">
-                        <MapPin className="h-4 w-4 mr-2" />
-                        {exp.location}
-                      </div>
                     </div>
-                  </div>
-
-                  <div className="mb-6">
-                    <h5 className="text-lg font-semibold mb-3 flex items-center">
-                      <ArrowRight className="h-4 w-4 mr-2 text-(--primary-color)" />
-                      Principais Conquistas
-                    </h5>
-                    <ul className="space-y-2">
-                      {exp.achievements.map((achievement, achievementIndex) => (
-                        <li
-                          key={achievementIndex}
-                          className="text-muted-foreground flex items-start"
-                        >
-                          <span className="w-2 h-2 bg-(--primary-color) rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                          {achievement}
-                        </li>
-                      ))}
-                    </ul>
                   </div>
 
                   <div>
@@ -123,6 +94,7 @@ export default function Experience() {
           </div>
         </div>
       </div>
+      <Activities />
     </section>
   );
 }

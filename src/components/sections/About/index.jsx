@@ -15,9 +15,7 @@ export default function About() {
           badge="Quem sou eu"
           title="Sobre mim"
           description="
-Gosto de entender o todo, da regra de negócio à arquitetura, para criar sistemas que sejam realmente úteis, escaláveis e bem estruturados.
-Tenho olhar analítico, curiosidade constante e acredito que o código certo é aquele que simplifica o trabalho das pessoas e gera valor para quem usa.
-Sigo aprendendo, evoluindo e compartilhando conhecimento, sempre em busca de entregar mais do que apenas software: experiências eficientes, claras e humanas."
+Gosto de entender o todo, da regra de negócio à arquitetura, para criar sistemas que sejam realmente úteis, escaláveis e bem estruturados."
         />
 
         <div className="flex flex-col lg:flex-row gap-16 items-start">
@@ -31,9 +29,9 @@ Domino a criação de APIs escaláveis aplicando princípios de arquitetura limp
 
             <GlassCard
               title="Habilidades Interpessoais"
-              text="Tenho perfil analítico e colaborativo, com facilidade em comunicação técnica e organização de processos. 
-          Valorizo o aprendizado contínuo e a clareza na execução, buscando sempre alinhar tecnologia, equipe e estratégia. 
-          Sou proativa, detalhista e comprometida com a entrega de soluções que realmente resolvem problemas e otimizam o dia a dia das pessoas."
+              text="Tenho perfil analítico e colaborativo, com boa comunicação técnica e foco em organização.
+Busco alinhar tecnologia e estratégia para entregar soluções práticas, eficientes e de impacto real.
+Sou proativa, detalhista e comprometida com resultados consistentes."
             />
           </div>
 
