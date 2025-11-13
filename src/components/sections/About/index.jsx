@@ -63,14 +63,8 @@ Sou proativa, detalhista e comprometida com resultados consistentes."
           </div>
         </div>
 
-        <div className="mt-20 text-center">
-          <StatsGroup
-            items={[
-              { value: "2+", label: "Anos de experiência" },
-              { value: "7+", label: "Projetos entregues" },
-              { value: "∞", label: "Aprendizado contínuo" },
-            ]}
-          />
+        <div className="mt-20 flex justify-center">
+          <StatsGroup items={[{ value: "2+", label: "Anos de experiência" }]} />
         </div>
       </div>
     </section>

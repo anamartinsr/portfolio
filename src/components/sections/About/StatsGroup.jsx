@@ -1,6 +1,6 @@
 export default function StatsGroup({ items }) {
   return (
-    <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 glass-card rounded-full px-6 sm:px-8 py-3 sm:py-4">
+    <div className="flex w-60 justify-center items-center glass-card rounded-full p-3">
       {items.map((item, index) => (
         <div key={index} className="flex items-center gap-6 sm:gap-8">
           <div className="text-center">
