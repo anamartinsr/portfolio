@@ -21,34 +21,35 @@ Gosto de entender o todo, da regra de negócio à arquitetura, para criar sistem
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           <div className="lg:w-1/2 space-y-6">
             <GlassCard
-              title="Experiência Técnica"
-              text="Tenho sólida experiência no desenvolvimento de sistemas, atuando desde a modelagem de dados até a entrega e manutenção de aplicações em produção.
-Domino a criação de APIs escaláveis aplicando princípios de arquitetura limpa, autenticação segura e documentação.
+              title="Experiência"
+              text="Com foco em TypeScript e JavaScript (Node.js e React), possuo experiência em design de APIs e integração de sistemas, criando interfaces intuitivas com alta usabilidade cognitiva.
+Experiência em produção com APIs REST, PostgreSQL, MySQL, MongoDB, Redis, Docker, CI/CD, Nginx, React, Tailwind CSS, testes unitários e de integração usando Jest e SuperTest.
+Forte foco em regras de negócio, arquitetura limpa e design de sistemas..
 "
             />
 
-            <GlassCard
+            {/* <GlassCard
               title="Habilidades Interpessoais"
               text="Tenho perfil analítico e colaborativo, com boa comunicação técnica e foco em organização.
 Busco alinhar tecnologia e estratégia para entregar soluções práticas, eficientes e de impacto real.
 Sou proativa, detalhista e comprometida com resultados consistentes."
-            />
+            /> */}
           </div>
 
           <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <CardAbout
+            {/* <CardAbout
               icon={<GraduationCap className=" w-12" />}
               title="Formação"
               text="Graduanda em Sistemas de Informação — Universidade Estácio de Sá (2023–2026)."
               delay={300}
-            />
-            <CardAbout
+            /> */}
+            {/* <CardAbout
               icon={<Server className="w-12" />}
               title="Atuação Técnica"
               text="Desenvolvimento back-end com Node.js, Express e bancos de dados SQL e NoSQL, além de integrações entre serviços e APIs externas."
               delay={400}
-            />
-            <CardAbout
+            /> */}
+            {/* <CardAbout
               icon={<Users className=" w-12" />}
               title="Organização e Processos"
               text="Definição de padrões de desenvolvimento, documentação técnica e estruturação de projetos para garantir consistência e manutenibilidade."
@@ -59,13 +60,13 @@ Sou proativa, detalhista e comprometida com resultados consistentes."
               title="Desenvolvimento Full Stack"
               text="Experiência também no front-end com React, TailwindCSS e boas práticas de UX, garantindo interfaces acessíveis e intuitivas."
               delay={600}
-            />
+            /> */}
           </div>
         </div>
 
-        <div className="mt-20 flex justify-center">
+        {/* <div className="mt-20 flex justify-center">
           <StatsGroup items={[{ value: "2+", label: "Anos de experiência" }]} />
-        </div>
+        </div> */}
       </div>
     </section>
   );

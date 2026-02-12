@@ -33,7 +33,7 @@ export default function Header() {
             href="https://github.com/anamartinsr"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white text-3xl hover:text-[#ca7bff] transition-colors"
+            className="text-white font-bold text-3xl hover:text-[#ca7bff] transition-colors"
           >
             <Github />
           </a>

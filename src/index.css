@@ -33,7 +33,7 @@
 }
 
 body {
-  background-color: var(--purple-1);
+  background-color: var(--purple-3);
   color: var(--foreground);
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color) #cfcfcf;
@@ -51,8 +51,9 @@ body {
   background: #cfcfcf;
 }
 
-.text-gradient {
-  background: linear-gradient(90deg, #7217c7 0%, #38126d 100%);
+.text-gradient,
+.text-primary {
+  background: #a74aff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -63,7 +64,7 @@ body {
   background: var(--gradient-primary);
 }
 .gradient-subtle {
-  background: var(--gradient-subtle);
+  background: var(--black);
 }
 .gradient-card {
   background: var(--gradient-card);
@@ -185,9 +186,6 @@ body {
   border-color: var(--border);
 }
 
-.text-primary {
-  color: var(--primary-color);
-}
 .text-secondary {
   color: var(--purple-3);
 }
