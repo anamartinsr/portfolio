@@ -1,3 +1,7 @@
+import { FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import SocialLink from "../../ui/SocialLink";
+
 export default function CardAbout({ icon, title, text }) {
   return (
     <div
@@ -14,10 +18,24 @@ export default function CardAbout({ icon, title, text }) {
 
       <div className="relative z-10 flex flex-col items-center">
         <div className="mb-4 p-2 rounded-xl bg-[linear-gradient(135deg,hsla(280,80%,65%,0.1)_0%,hsla(320,85%,65%,0.1)_100%)]">
-          <div className="text-primary">{icon}</div>
+          <div className="text-(--purple-0)">{icon}</div>
         </div>
         <h3 className="text-xl font-bold text-foreground mb-3">{title}</h3>
         <p className="text-muted-foreground text-sm leading-relaxed">{text}</p>
+      </div>
+
+      <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-4">
+        <SocialLink
+          href="https://www.instagram.com/seu_usuario"
+          Icon={FaInstagram}
+        />
+
+        <SocialLink
+          href="https://www.tiktok.com/@seu_usuario"
+          Icon={FaTiktok}
+        />
+
+        <SocialLink href="https://x.com/seu_usuario" Icon={FaXTwitter} />
       </div>
     </div>
   );
