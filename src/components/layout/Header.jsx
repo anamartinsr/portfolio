@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Linkedin, Github } from "lucide-react";
+import SocialLink from "../ui/SocialLink";
+import SocialLinkedin from "../ui/SocialLinkedin";
+import SocialGitHub from "../ui/SocialGithub";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -29,23 +32,8 @@ export default function Header() {
     >
       <nav className="max-w-6xl mx-auto flex justify-between items-center p-4">
         <div className="flex items-center space-x-4">
-          <a
-            href="https://github.com/anamartinsr"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white font-bold text-3xl hover:text-[#ca7bff] transition-colors"
-          >
-            <Github />
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/anamartinsr/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white text-3xl hover:text-[#85c2ff] transition-colors"
-          >
-            <Linkedin />
-          </a>
+          <SocialGitHub />
+          <SocialLinkedin />
         </div>
 
         <ul className="hidden md:flex space-x-6">
@@ -53,8 +41,8 @@ export default function Header() {
             <li key={href}>
               <a
                 href={href}
-                className="relative py-2 px-3 text-white transition-colors
-                           after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-[#cd81ff]
+                className="relative py-2 px-3 text-(--white) font-semibold transition-colors
+                           after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-(--purple-0)
                            after:left-0 after:-bottom-1 after:transition-all after:duration-300
                            hover:after:w-full"
               >
@@ -64,19 +52,22 @@ export default function Header() {
           ))}
         </ul>
 
-        <button onClick={() => setOpen(!open)} className="md:hidden text-white">
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-(--white)"
+        >
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </nav>
 
       {open && (
-        <div className="md:hidden bg-violet-800/90 backdrop-blur-md px-6 py-4 space-y-4">
+        <div className="md:hidden backdrop-blur-md px-6 py-4 space-y-4">
           {navLinks.map(({ href, label }) => (
             <a
               key={href}
               href={href}
               onClick={() => setOpen(false)}
-              className="block text-white hover:text-violet-800 transition-colors"
+              className="block text-(--white) hover:text-(--gray) transition-colors"
             >
               {label}
             </a>
