@@ -1,12 +1,12 @@
-export default function SocialLink({ href, hoverColor, Icon, size }) {
+export default function SocialLink({ href, Icon }) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`text-(--white) hover:text-[${hoverColor}] transition`}
+      className={`text-(--white) hover:text-(--primary-color) transition`}
     >
-      <Icon size={size} strokeWidth={1.5} />
+      <Icon strokeWidth={1.5} />
     </a>
   );
 }
