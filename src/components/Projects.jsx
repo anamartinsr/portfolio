@@ -3,6 +3,7 @@ import { FiGlobe } from "react-icons/fi";
 import Title from "./Title";
 import projects from "../data/projects";
 import Button from "./ui/Button";
+import BadgeTech from "./ui/BadgeTech";
 
 function ProjectCard({ project, reverse }) {
   return (
@@ -42,12 +43,7 @@ function ProjectCard({ project, reverse }) {
 
         <div className="flex flex-wrap gap-2 mt-2">
           {project.techs.map((tech) => (
-            <span
-              key={tech}
-              className="px-3 py-1 text-xs font-medium bg-(--primary-color) text-(--white) rounded-full"
-            >
-              {tech}
-            </span>
+            <BadgeTech key={tech} tech={tech} />
           ))}
         </div>
       </div>
@@ -74,6 +70,11 @@ export default function Projects() {
             reverse={idx % 2 !== 0}
           />
         ))}
+      </div>
+      <div className="flex justify-center items-center mt-20">
+        <Button href="https://github.com/anamartinsr" icon={SiGithub}>
+          Ver mais projetos
+        </Button>
       </div>
     </section>
   );
