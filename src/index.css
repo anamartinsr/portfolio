@@ -4,17 +4,17 @@
   --primary-color: #7217c7;
   --black: #000000;
   --white: #ffffff;
-  --gray: #c9c9c9;
+  --gray: #c9c9c9be;
+  --blue: #85c2ff;
 
+  --purple-0: #a74aff;
   --purple-1: #130428;
   --purple-2: #251043;
   --purple-3: #38126d;
   --purple-4: #261045;
   --purple-5: #190634;
+  --purple-6: #ca7bff;
 
-  --foreground: #ffffff;
-  --border: #251043;
-  --card: #190634;
   --radius: 1rem;
 
   --gradient-primary: linear-gradient(
@@ -33,8 +33,8 @@
 }
 
 body {
-  background-color: var(--purple-1);
-  color: var(--foreground);
+  background-color: var(--purple-3);
+  color: var(--white);
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color) #cfcfcf;
 }
@@ -42,6 +42,7 @@ body {
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
   border-radius: 5px;
@@ -51,25 +52,16 @@ body {
   background: #cfcfcf;
 }
 
-.text-gradient {
-  background: linear-gradient(90deg, #7217c7 0%, #38126d 100%);
+.text-gradient,
+.text-primary {
+  background: #a74aff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
 }
 
-.gradient-primary {
-  background: var(--gradient-primary);
-}
-.gradient-subtle {
-  background: var(--gradient-subtle);
-}
-.gradient-card {
-  background: var(--gradient-card);
-}
-
-.bg-background {
+.bg-gradiente {
   background: linear-gradient(
     135deg,
     var(--purple-1) 7%,
@@ -185,9 +177,6 @@ body {
   border-color: var(--border);
 }
 
-.text-primary {
-  color: var(--primary-color);
-}
 .text-secondary {
   color: var(--purple-3);
 }

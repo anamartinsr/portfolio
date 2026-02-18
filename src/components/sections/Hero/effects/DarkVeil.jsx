@@ -137,7 +137,6 @@ export default function DarkVeil({
     };
 
     loop();
-
     return () => {
       cancelAnimationFrame(frame);
       window.removeEventListener("resize", resize);

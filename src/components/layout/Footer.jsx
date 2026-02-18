@@ -1,6 +1,7 @@
-import { Mail, Linkedin, Github, ArrowUp } from "lucide-react";
-import SocialLink from "../ui/SocialLink";
+import { MapPin, Mail, ArrowUp } from "lucide-react";
 import ScrollToSection from "../../utils/scroll";
+import SocialGitHub from "../ui/SocialGithub";
+import SocialLinkedin from "../ui/SocialLinkedin";
 
 export default function Footer() {
   return (
@@ -8,21 +9,16 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-start justify-between gap-8">
         <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
           <div className="flex gap-6 mb-4 md:mb-0">
-            <SocialLink
-              href="https://github.com/anamartinsr/"
-              Icon={Github}
-              hoverColor="#ca7bff"
-            />
-            <SocialLink
-              href="https://www.linkedin.com/in/anamartinsr/"
-              Icon={Linkedin}
-              hoverColor="#0A66C2"
-            />
+            <SocialGitHub size={40} />
+            <SocialLinkedin size={40} />
           </div>
 
-          <p className="text-sm text-gray-300 max-w-xs">
-            Turning complex problems into simple solutions, one line at a time.
-          </p>
+          <div>
+            <div className="flex items-center gap-2">
+              <MapPin size={18} />
+              Belo Horizonte, MG - Brasil
+            </div>
+          </div>
         </div>
 
         <nav className="flex flex-col gap-3 text-sm font-medium">
@@ -66,7 +62,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-6 text-center text-xs text-gray-500">
-        © {new Date().getFullYear()} Ana Martins — Todos os direitos reservados
+        © {new Date().getFullYear()} Ana Martins - Todos os direitos reservados
       </div>
     </footer>
   );
