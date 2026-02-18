@@ -28,12 +28,12 @@ export default function CardAbout({ icon, title, text, showSocial = false }) {
       {showSocial && (
         <div className="mt-auto pt-6 flex justify-center gap-4">
           <SocialLink
-            href="https://www.instagram.com/anamartins.dev"
-            Icon={FaInstagram}
-          />
-          <SocialLink
             href="https://www.tiktok.com/@anamartins.dev"
             Icon={FaTiktok}
+          />
+          <SocialLink
+            href="https://www.instagram.com/anamartins.dev"
+            Icon={FaInstagram}
           />
           <SocialLink href="https://x.com/anamartinsdev" Icon={FaXTwitter} />
         </div>
