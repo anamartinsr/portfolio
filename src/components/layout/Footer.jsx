@@ -1,5 +1,4 @@
-import { MapPin, Mail, Linkedin, Github, ArrowUp } from "lucide-react";
-import SocialLink from "../ui/SocialLink";
+import { MapPin, Mail, ArrowUp } from "lucide-react";
 import ScrollToSection from "../../utils/scroll";
 import SocialGitHub from "../ui/SocialGithub";
 import SocialLinkedin from "../ui/SocialLinkedin";
@@ -63,7 +62,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-6 text-center text-xs text-gray-500">
-        © {new Date().getFullYear()} Ana Martins — Todos os direitos reservados
+        © {new Date().getFullYear()} Ana Martins - Todos os direitos reservados
       </div>
     </footer>
   );

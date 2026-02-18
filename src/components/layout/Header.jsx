@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Linkedin, Github } from "lucide-react";
-import SocialLink from "../ui/SocialLink";
 import SocialLinkedin from "../ui/SocialLinkedin";
 import SocialGitHub from "../ui/SocialGithub";
 
