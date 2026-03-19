@@ -1,6 +1,7 @@
 import Tecnologym from "../assets/tecnologym.png";
 import ApiAgendamento from "../assets/agendamento.png";
 import UrlShortener from "../assets/url_shortener.png";
+import DocuSend from "../assets/docusend.png";
 
 const projects = [
   {
@@ -43,6 +44,7 @@ const projects = [
       "Vercel",
       "Vitest",
       "Testing Library",
+      "Zod",
     ],
     codeLink: "https://github.com/anamartinsr/technology_gym",
     projectLink: "https://technologym.vercel.app/",
@@ -64,6 +66,42 @@ const projects = [
       "Docker",
     ],
     codeLink: "https://github.com/anamartinsr/agendamento_consultas_api",
+  },
+  {
+    title: "DocuSend",
+    description:
+      "DocuSend é uma aplicação de envio de documentos, permitindo que os usuários enviem arquivos de forma rápida e segura, com integração de API, validação de dados e testes automatizados, utilizando tecnologias modernas para garantir uma experiência eficiente e confiável.",
+    img: DocuSend,
+    techs: [
+      "TypeScript",
+      "React",
+      "Vite",
+      "TailwindCSS",
+      "Github Actions CI/CD",
+      "Vercel",
+      "Vitest",
+      "Testing Library",
+      "E2E Testing",
+      "Zod",
+      "API integration",
+    ],
+    codeLink: "https://github.com/anamartinsr/docuSend",
+  },
+  {
+    title: "DocuSign Integration",
+    description:
+      "Integração com a plataforma DocuSign para assinatura eletrônica de documentos, permitindo que os usuários enviem e assinem contratos digitalmente, com foco em segurança e conformidade.",
+    img: DocuSend,
+    techs: [
+      "Node.js",
+      "TypeScript",
+      "Express",
+      "Jest",
+      "helmet",
+      "Zod",
+      "API integration",
+    ],
+    codeLink: "https://github.com/anamartinsr/docusign-integration",
   },
 ];
 
