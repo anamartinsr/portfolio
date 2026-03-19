@@ -41,6 +41,8 @@ const projects = [
       "Husky",
       "Github Actions CI/CD",
       "Vercel",
+      "Vitest",
+      "Testing Library",
     ],
     codeLink: "https://github.com/anamartinsr/technology_gym",
     projectLink: "https://technologym.vercel.app/",
