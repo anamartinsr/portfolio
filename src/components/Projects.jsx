@@ -7,7 +7,7 @@ import BadgeTech from "./ui/BadgeTech";
 
 function ProjectCard({ project, reverse }) {
   return (
-    <div className="grid md:grid-cols-2 gap-12 items-center">
+    <div className="grid md:grid-cols-2 gap-12 items-center relative overflow-visible">
       <div className={reverse ? "md:order-2" : ""}>
         <img
           src={project.img}
@@ -18,13 +18,13 @@ function ProjectCard({ project, reverse }) {
         />
       </div>
 
-      <div className="space-y-4">
-        <h3 className="text-3xl font-bold text-(--gray)">{project.title}</h3>
+      <div className="space-y-4 relative ">
+        <h3 className="text-3xl text-(--white)">{project.title}</h3>
 
-        <div className="bg-(--white)/10 backdrop-blur-md rounded-lg p-6 shadow-lg text-center space-y-4">
-          <p className="text-(--gray) text-sm leading-relaxed">
-            {project.description}
-          </p>
+        <div
+          className={`bg-[color:var(--card-soft)] backdrop-blur-md rounded-lg p-6 shadow-lg text-center space-y-4 z-10 ${reverse ? "-mr-18" : "-ml-18"}`}
+        >
+          <p className="leading-relaxed">{project.description}</p>
 
           <div className="flex justify-center gap-4 mt-2 flex-wrap">
             {project.codeLink && (
@@ -55,26 +55,30 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative text-center bg-(--black) py-20 px-6 md:px-16"
+      className="w-full text-center py-24 px-6 md:px-20 relative overflow-hidden"
     >
-      <Title
-        text="Projetos"
-        description="Projetos que desenvolvi aplicando na prática conceitos de desenvolvimento, arquitetura e tecnologia."
-      />
+      <div className="max-w-7xl mx-auto relative z-10">
+        <Title
+          eyebrow="Portfólio"
+          text="Projetos"
+          description="Projetos que desenvolvi aplicando na prática conceitos de desenvolvimento, arquitetura e tecnologia."
+        />
 
-      <div className="max-w-6xl mx-auto space-y-24">
-        {projects.map((project, idx) => (
-          <ProjectCard
-            key={project.title}
-            project={project}
-            reverse={idx % 2 !== 0}
-          />
-        ))}
-      </div>
-      <div className="flex justify-center items-center mt-20">
-        <Button href="https://github.com/anamartinsr" icon={SiGithub}>
-          Ver mais projetos
-        </Button>
+        <div className="max-w-6xl mx-auto space-y-24">
+          {projects.map((project, idx) => (
+            <ProjectCard
+              key={project.title}
+              project={project}
+              reverse={idx % 2 !== 0}
+            />
+          ))}
+        </div>
+
+        <div className="flex justify-center items-center mt-20">
+          <Button href="https://github.com/anamartinsr" icon={SiGithub}>
+            Ver mais projetos
+          </Button>
+        </div>
       </div>
     </section>
   );

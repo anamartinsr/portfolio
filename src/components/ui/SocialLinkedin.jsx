@@ -6,7 +6,7 @@ export default function SocialLinkedin({ size }) {
       href="https://www.linkedin.com/in/anamartinsr"
       target="_blank"
       rel="noopener noreferrer"
-      className={`text-(--white) hover:text-(--blue) transition`}
+      className="text-[color:var(--header-text)] hover:text-[color:var(--header-text-hover)] transition"
     >
       <Linkedin size={size} strokeWidth={1.5} />
     </a>

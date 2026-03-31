@@ -8,7 +8,6 @@ const projects = [
     title: "URL Shortener (100k+ URLs)",
     description:
       "API de encurtamento de URLs escalável, capaz de processar até 100 milhões de encurtamentos por dia, com Node.js, TypeScript, Redis, Cassandra, Swagger e Docker, aplicando princípios de Clean Architecture e System Design, o projeto inclui testes automatizados com Jest e Supertest, além de documentação via Swagger.",
-
     img: UrlShortener,
     techs: [
       "Clean Architecture",

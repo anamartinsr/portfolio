@@ -5,8 +5,8 @@ import SocialLinkedin from "../ui/SocialLinkedin";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-400 py-8 border-t border-gray-800 relative">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-start justify-between gap-8">
+    <footer className="bg-[color:var(--footer-bg)] text-[color:var(--footer-text)] py-12 border-t border-[color:var(--footer-border)] relative">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start justify-between gap-8">
         <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
           <div className="flex gap-6 mb-4 md:mb-0">
             <SocialGitHub size={40} />
@@ -22,16 +22,16 @@ export default function Footer() {
         </div>
 
         <nav className="flex flex-col gap-3 text-sm font-medium">
-          <a href="#hero" className="hover:text-white transition">
+          <a href="#hero" className="hover:text-(--white) transition">
             Início
           </a>
-          <a href="#about" className="hover:text-white transition">
+          <a href="#about" className="hover:text-(--white) transition">
             Sobre
           </a>
-          <a href="#projects" className="hover:text-white transition">
+          <a href="#projects" className="hover:text-(--white) transition">
             Projetos
           </a>
-          <a href="#contact" className="hover:text-white transition">
+          <a href="#contact" className="hover:text-(--white) transition">
             Contato
           </a>
         </nav>
@@ -41,7 +41,7 @@ export default function Footer() {
             <Mail size={18} />
             <a
               href="mailto:martinnrs.ana@gmail.com"
-              className="hover:text-white transition"
+              className="hover:text-(--white) transition"
             >
               martinnrs.ana@gmail.com
             </a>
@@ -49,7 +49,7 @@ export default function Footer() {
 
           <a
             href="#home"
-            className="flex items-center gap-1 text-xs text-gray-400 hover:text-white transition mt-2"
+            className="flex items-center gap-1 text-xs text-[color:var(--footer-text)] hover:text-(--white) transition mt-2"
           >
             <button
               onClick={() => ScrollToSection("#hero")}
@@ -61,7 +61,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mt-6 text-center text-xs text-gray-500">
+      <div className="mx-auto mt-6 h-px w-full max-w-6xl bg-[color:var(--footer-border)]" />
+
+      <div className="max-w-6xl mx-auto px-6 mt-4 text-center text-xs text-[color:var(--footer-text-muted)]">
         © {new Date().getFullYear()} Ana Martins - Todos os direitos reservados
       </div>
     </footer>

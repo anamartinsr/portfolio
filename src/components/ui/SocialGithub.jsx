@@ -6,7 +6,7 @@ export default function SocialGitHub({ size }) {
       href="https://github.com/anamartinsr"
       target="_blank"
       rel="noopener noreferrer"
-      className={`text-(--white) hover:text-(--purple-6) transition`}
+      className="text-[color:var(--header-text)] hover:text-[color:var(--header-text-hover)] transition"
     >
       <Github size={size} strokeWidth={1.5} />
     </a>

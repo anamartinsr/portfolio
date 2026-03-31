@@ -29,6 +29,24 @@ const experiences = [
       "Git e GitHub",
       "Microserviços",
     ],
+    highlights: [
+      "Desenvolvimento de sistemas corporativos escaláveis",
+      "Manutenção e otimização de APIs legadas",
+      "Implementação de novas funcionalidades Frontend",
+    ],
+  },
+  {
+    title: "Desenvolvedora Júnior",
+    company: "CIEEMG",
+    period: "Jan 2023 - Mai 2024",
+    description:
+      "Suporte no desenvolvimento de funcionalidades e manutenção de sistemas existentes.",
+    technologies: ["JAVASCRIPT", "HTML/CSS", "SQL"],
+    highlights: [
+      "Suporte no desenvolvimento de CRUDs básicos",
+      "Ajustes de layout em páginas institucionais",
+      "Testes unitários e documentação técnica",
+    ],
   },
 ];
 

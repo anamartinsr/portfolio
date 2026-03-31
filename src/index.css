@@ -1,6 +1,13 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: dark;
+
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Manrope", sans-serif;
+  --font-script: "Great Vibes", cursive;
+
   --primary-color: #7217c7;
   --black: #000000;
   --white: #ffffff;
@@ -30,13 +37,108 @@
   );
 
   --shadow-glow: 0 0 40px rgba(114, 23, 199, 0.4);
+
+  --bg-page: var(--purple-3);
+  --text-primary: var(--white);
+  --text-muted-foreground: #aaa;
+  --surface-glass: rgba(255, 255, 255, 0.03);
+  --surface-glass-border: rgba(255, 255, 255, 0.08);
+  --header-bg-scrolled: rgba(76, 29, 149, 0.3);
+  --header-bg-mobile: rgba(19, 4, 40, 0.6);
+  --header-text: var(--white);
+  --header-text-hover: var(--purple-0);
+  --header-underline: var(--purple-0);
+  --footer-bg: #000000;
+  --footer-border: #1f2937;
+  --footer-text: #9ca3af;
+  --footer-text-muted: #6b7280;
+  --button-bg: #ffffff;
+  --button-bg-hover: #c9c9c9;
+  --button-text: #7217c7;
+  --card-soft: rgba(255, 255, 255, 0.1);
+  --secondary-color: #130428;
+  --surface-darker: #1a0d32;
+  --surface-card: #251043;
+  --hero-bg: transparent;
+  --hero-text: #ffffff;
+  --hero-focus-text: #d1d5db;
+  --hero-arrow: var(--gray);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --black: #f4f6fb;
+  --white: #111827;
+  --gray: #4b5563;
+  --blue: #0a66c2;
+
+  --purple-1: #eef2ff;
+  --purple-2: #e9d8fd;
+  --purple-3: #f8faff;
+  --purple-4: #ddd6fe;
+  --purple-5: #ede9fe;
+
+  --bg-page: #f8faff;
+  --text-primary: #111827;
+  --text-muted-foreground: #6b7280;
+  --surface-glass: rgba(17, 24, 39, 0.03);
+  --surface-glass-border: rgba(17, 24, 39, 0.08);
+  --header-bg-scrolled: transparent;
+  --header-bg-mobile: transparent;
+  --header-text: #ffffff;
+  --header-text-hover: #ffffff;
+  --header-underline: #ffffff;
+  --footer-bg: #eef2f8;
+  --footer-border: #d1d5db;
+  --footer-text: #4b5563;
+  --footer-text-muted: #6b7280;
+  --button-bg: #111827;
+  --button-bg-hover: #1f2937;
+  --button-text: #f9fafb;
+  --card-soft: rgba(17, 24, 39, 0.08);
+  --secondary-color: #e8ecf5;
+  --surface-darker: #e0e5f0;
+  --surface-card: #f0f4fa;
+  --hero-bg: #ffffff;
+  --hero-text: #ffffff;
+  --hero-focus-text: #ffffff;
+  --hero-arrow: #ffffff;
 }
 
 body {
-  background-color: var(--purple-3);
-  color: var(--white);
+  /* background-color: var(--bg-page); */
+  color: var(--text-primary);
+  font-family: var(--font-body);
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color) #cfcfcf;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-headline);
+}
+
+label {
+  font-family: var(--font-label);
+}
+
+.font-headline {
+  font-family: var(--font-headline);
+}
+
+.font-body,
+.font-label,
+.font-poppins {
+  font-family: var(--font-body);
+}
+
+.font-script {
+  font-family: var(--font-script);
 }
 
 ::-webkit-scrollbar {
@@ -73,9 +175,9 @@ body {
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--surface-glass);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--surface-glass-border);
 }
 
 .shadow-glow {
@@ -185,7 +287,7 @@ body {
 }
 
 .text-muted-foreground {
-  color: #aaa;
+  color: var(--text-muted-foreground);
 }
 
 .text-balance {

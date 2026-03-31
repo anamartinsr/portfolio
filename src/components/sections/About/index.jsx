@@ -11,6 +11,7 @@ export default function About() {
     >
       <div className="max-w-7xl mx-auto relative z-10">
         <Title
+          eyebrow="Sobre"
           text="Sobre mim"
           description="
 Gosto de entender o todo, da regra de negócio à arquitetura, para criar sistemas que sejam realmente úteis, escaláveis e bem estruturados."
@@ -67,14 +68,14 @@ Gosto de entender o todo, da regra de negócio à arquitetura, para criar sistem
             </GlassCard>
           </div>
 
-          <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <CardAbout
+          <div className="lg:w-1/2 gap-6">
+            {/* <CardAbout
               icon={<Lightbulb className=" w-12" />}
               title="Criador de conteúdo técnico"
               text="Produzo conteúdos sobre desenvolvimento e tecnologia com foco em quem está começando na área, compartilhando o que aprendi ao longo da minha jornada na programação."
               delay={300}
               showSocial={true}
-            />
+            /> */}
 
             <CardAbout
               icon={<University className=" w-12" />}
