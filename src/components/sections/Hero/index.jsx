@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import { FaCode } from "react-icons/fa";
+
 import TrueFocus from "./effects/TrueFocus";
 import BackgroundDark from "../../../assets/background.png";
 import BackgroundLight from "../../../assets/grainient-1774962431663.png";
 import IntroBadge from "./IntroBadge";
 import ScrollDownButton from "./ScrollDownButton";
+import Button from "../../ui/Button";
 
 export default function Hero() {
   const getTheme = () =>
@@ -48,7 +51,10 @@ export default function Hero() {
         <TrueFocus />
       </div>
 
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center">
+      <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center gap-5 justify-center">
+        <Button href="#projects" target="_self" icon={FaCode}>
+          Ver Projetos
+        </Button>
         <ScrollDownButton />
       </div>
     </div>

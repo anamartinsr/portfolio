@@ -7,7 +7,7 @@ export default function ScrollDownButton() {
       onClick={() => ScrollToSection("#about")}
       className="animate-bounce transition-colors cursor-pointer"
     >
-      <ArrowDown className="h-8 w-8 text-[color:var(--hero-arrow)] hover:text-[color:var(--hero-arrow)]" />
+      <ArrowDown className="h-5 text-[color:var(--hero-arrow)] hover:text-[color:var(--hero-arrow)]" />
     </button>
   );
 }

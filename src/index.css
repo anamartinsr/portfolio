@@ -63,6 +63,13 @@
   --hero-text: #ffffff;
   --hero-focus-text: #d1d5db;
   --hero-arrow: var(--gray);
+
+  /* Community Avatar Colors */
+  --community-avatar-1: rgba(144, 147, 255, 0.25);
+  --community-avatar-2: rgba(114, 23, 199, 0.25);
+  --community-avatar-3: rgba(201, 201, 201, 0.15);
+  --community-avatar-4: rgba(114, 23, 199, 0.3);
+  --community-avatar-5: rgba(144, 147, 255, 0.3);
 }
 
 [data-theme="light"] {
@@ -103,11 +110,10 @@
   --hero-bg: #ffffff;
   --hero-text: #ffffff;
   --hero-focus-text: #ffffff;
-  --hero-arrow: #ffffff;
+  --hero-arrow: #7217c7;
 }
 
 body {
-  /* background-color: var(--bg-page); */
   color: var(--text-primary);
   font-family: var(--font-body);
   scrollbar-width: thin;
@@ -166,11 +172,11 @@ label {
 .bg-gradiente {
   background: linear-gradient(
     135deg,
-    var(--purple-1) 7%,
-    var(--purple-2) 34%,
-    var(--purple-3) 57%,
-    var(--purple-4) 85%,
-    var(--purple-5) 100%
+    var(--purple-0) 0%,
+    var(--purple-2) 26%,
+    var(--purple-3) 56%,
+    var(--purple-5) 84%,
+    var(--purple-3) 100%
   );
 }
 

@@ -7,7 +7,7 @@ const projects = [
   {
     title: "URL Shortener (100k+ URLs)",
     description:
-      "API de encurtamento de URLs escalável, capaz de processar até 100 milhões de encurtamentos por dia, com Node.js, TypeScript, Redis, Cassandra, Swagger e Docker, aplicando princípios de Clean Architecture e System Design, o projeto inclui testes automatizados com Jest e Supertest, além de documentação via Swagger.",
+      "API de encurtamento de URLs escalável, capaz de processar até 100 milhões de encurtamentos por dia. O  projeto aplica princípios de Clean Architecture, separação de responsabilidades e conceitos de System Design voltados a sistemas distribuídos.",
     img: UrlShortener,
     techs: [
       "Clean Architecture",
@@ -31,7 +31,7 @@ const projects = [
   {
     title: "Technology Gym",
     description:
-      "Este projeto é um template moderno para academias, com foco em performance, escalabilidade e facilidade de customização. Ideal para academias ou estúdios que buscam uma solução flexível, visualmente atraente e fácil de manter.",
+      "Site de academia com apresentação de planos, atividades e matrícula online, com estrutura moderna e foco em experiência do usuário, performance e arquitetura escalável.",
     img: Tecnologym,
     techs: [
       "TypeScript",
@@ -48,24 +48,24 @@ const projects = [
     codeLink: "https://github.com/anamartinsr/technology_gym",
     projectLink: "https://technologym.vercel.app/",
   },
-  {
-    title: "Api de Agendamento de Consultas",
-    description:
-      "API desenvolvida para gerenciar o agendamento de consultas, integração de disponibilidade, histórico e notificações por e-mail, com foco em escalabilidade, segurança e manutenibilidade",
-    img: ApiAgendamento,
-    techs: [
-      "Express",
-      "PostgreSQL",
-      "Node.js",
-      "Prisma",
-      "JWT",
-      "Swagger",
-      "Husky",
-      "CI/CD",
-      "Docker",
-    ],
-    codeLink: "https://github.com/anamartinsr/agendamento_consultas_api",
-  },
+  // {
+  //   title: "Api de Agendamento de Consultas",
+  //   description:
+  //     "API desenvolvida para gerenciar o agendamento de consultas, integração de disponibilidade, histórico e notificações por e-mail, com foco em escalabilidade, segurança e manutenibilidade",
+  //   img: ApiAgendamento,
+  //   techs: [
+  //     "Express",
+  //     "PostgreSQL",
+  //     "Node.js",
+  //     "Prisma",
+  //     "JWT",
+  //     "Swagger",
+  //     "Husky",
+  //     "CI/CD",
+  //     "Docker",
+  //   ],
+  //   codeLink: "https://github.com/anamartinsr/agendamento_consultas_api",
+  // },
   {
     title: "DocuSend",
     description:
