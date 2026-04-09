@@ -10,12 +10,17 @@ const NotFound = lazy(() => import("../pages/NotFound"));
 export default function AppRoutes() {
   return (
     <Suspense fallback={<Loading />}>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Layout>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <Home />
+            </Layout>
+          }
+        />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </Suspense>
   );
 }
