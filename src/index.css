@@ -13,6 +13,7 @@
   --white: #ffffff;
   --gray: #c9c9c9be;
   --blue: #85c2ff;
+  --scrol-bg: #000000;
 
   --purple-0: #a74aff;
   --purple-1: #130428;
@@ -63,7 +64,6 @@
   --hero-text: #ffffff;
   --hero-focus-text: #d1d5db;
   --hero-arrow: var(--gray);
-
   /* Community Avatar Colors */
   --community-avatar-1: rgba(144, 147, 255, 0.25);
   --community-avatar-2: rgba(114, 23, 199, 0.25);
@@ -111,6 +111,7 @@
   --hero-text: #ffffff;
   --hero-focus-text: #ffffff;
   --hero-arrow: #7217c7;
+  --scrol-bg: #7217c7;
 }
 
 body {
@@ -172,11 +173,11 @@ label {
 .bg-gradiente {
   background: linear-gradient(
     135deg,
-    var(--purple-0) 0%,
-    var(--purple-2) 26%,
-    var(--purple-3) 56%,
-    var(--purple-5) 84%,
-    var(--purple-3) 100%
+    var(--purple-1) 7%,
+    var(--purple-2) 34%,
+    var(--purple-3) 70%,
+    var(--purple-4) 85%,
+    var(--purple-5) 100%
   );
 }
 

@@ -1,4 +1,16 @@
-export const TECH_LOGO_COLOR = "000000";
+const getTechLogoColor = () => {
+  if (typeof document === "undefined") return "000000";
+
+  const rootStyles = getComputedStyle(document.documentElement);
+  const color =
+    rootStyles.getPropertyValue("--scrol-bg").trim() ||
+    rootStyles.getPropertyValue("--black").trim() ||
+    "#000000";
+
+  return color.startsWith("#") ? color.slice(1) : color;
+};
+
+export const TECH_LOGO_COLOR = getTechLogoColor() || "000000";
 
 function badgeUrl(label, logo, color = TECH_LOGO_COLOR) {
   return `https://img.shields.io/badge/${encodeURIComponent(label)}-${color}?style=for-the-badge&logo=${encodeURIComponent(logo)}&logoColor=white`;

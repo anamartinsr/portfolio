@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <div className="bg-(--black)">
+      <div className="bg-(--scrol-bg)">
         <LogoLoop
           logos={techLogos}
           speed={90}

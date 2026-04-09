@@ -1,4 +1,4 @@
-import { SiLinkedin } from "react-icons/si";
+import { Linkedin } from "lucide-react";
 
 import experiences from "../../../data/experience";
 import BadgeTech from "../../ui/BadgeTech";
@@ -107,10 +107,7 @@ export default function Experience() {
         </div>
       </div>
       <div className="flex justify-center items-center mt-12">
-        <Button
-          href="https://www.linkedin.com/in/anamartinsr/"
-          icon={SiLinkedin}
-        >
+        <Button href="https://www.linkedin.com/in/anamartinsr/" icon={Linkedin}>
           Ver minha jornada
         </Button>
       </div>

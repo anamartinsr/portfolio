@@ -8,7 +8,7 @@ import { aboutExperienceCategories } from "../../../data/aboutExperience";
 export default function About() {
   return (
     <section
-      className="w-full bg-gradiente py-24 px-6 md:px-20 relative overflow-hidden"
+      className="w-full bg-gradiente py-15 px-6 md:px-20 relative overflow-hidden"
       id="about"
     >
       <div className="max-w-7xl mx-auto relative z-10">
