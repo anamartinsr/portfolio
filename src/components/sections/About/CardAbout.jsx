@@ -1,5 +1,6 @@
 import { FaInstagram, FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { sharedSocialLinks } from "../../../data/content";
 import SocialLink from "../../ui/SocialLink";
 
 export default function CardAbout({ icon, title, text, showSocial = false }) {
@@ -27,15 +28,9 @@ export default function CardAbout({ icon, title, text, showSocial = false }) {
 
       {showSocial && (
         <div className="mt-auto pt-6 flex justify-center gap-4">
-          <SocialLink
-            href="https://www.tiktok.com/@anamartins.dev"
-            Icon={FaTiktok}
-          />
-          <SocialLink
-            href="https://www.instagram.com/anamartins.dev"
-            Icon={FaInstagram}
-          />
-          <SocialLink href="https://x.com/anamartinsdev" Icon={FaXTwitter} />
+          <SocialLink href={sharedSocialLinks.tiktok} Icon={FaTiktok} />
+          <SocialLink href={sharedSocialLinks.instagram} Icon={FaInstagram} />
+          <SocialLink href={sharedSocialLinks.x} Icon={FaXTwitter} />
         </div>
       )}
     </div>

@@ -1,9 +1,13 @@
 import { Github } from "lucide-react";
+import { sharedSocialLinks } from "../../data/content";
 
-export default function SocialGitHub({ size }) {
+export default function SocialGitHub({
+  size,
+  href = sharedSocialLinks.github,
+}) {
   return (
     <a
-      href="https://github.com/anamartinsr"
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       className="text-[color:var(--header-text)] hover:text-[color:var(--header-text-hover)] transition"

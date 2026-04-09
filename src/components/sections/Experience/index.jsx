@@ -1,14 +1,19 @@
 import { Linkedin } from "lucide-react";
 
-import experiences from "../../../data/experience";
 import BadgeTech from "../../ui/BadgeTech";
 import Title from "../../Title";
 import Button from "../../ui/Button";
 import BackgroundGlow from "../../illustration/BackgroundGlow";
+import { getLanguageContent, sharedSocialLinks } from "../../../data/content";
+import { useLanguage } from "../../../context/LanguageContext";
 
 export default function Experience() {
+  const { language } = useLanguage();
+  const { experience } = getLanguageContent(language);
+  const experiencesList = experience.experiences;
+
   const allTechnologies = [
-    ...new Set(experiences.flatMap((exp) => exp.technologies)),
+    ...new Set(experiencesList.flatMap((exp) => exp.technologies)),
   ];
 
   const getCardBorderClass = (index) => {
@@ -33,15 +38,15 @@ export default function Experience() {
 
       <div className="max-w-7xl mx-auto">
         <Title
-          eyebrow="Trajetória"
-          text="Experiência"
-          highlight="Profissional"
+          eyebrow={experience.eyebrow}
+          text={experience.text}
+          highlight={experience.highlight}
         />
 
         <div className="max-w-6xl mx-auto relative">
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[2px] bg-[color:var(--surface-glass-border)] -translate-x-1/2" />
 
-          {experiences.map((exp, index) => {
+          {experiencesList.map((exp, index) => {
             const isEven = index % 2 === 0;
             const rowClass = isEven
               ? "flex flex-col md:flex-row"
@@ -57,17 +62,17 @@ export default function Experience() {
                       className={`bg-[color:var(--surface-card)] p-8 rounded-xl ${getCardBorderClass(index)}`}
                     >
                       <span className="text-xs font-bold text-(--primary-color) mb-2 block uppercase tracking-widest">
-                        {exp.period}
+                        {exp.period[language]}
                       </span>
                       <h3 className="text-2xl font-bold text-[color:var(--text-primary)] mb-1">
-                        {exp.title}
+                        {exp.title[language]}
                       </h3>
                       <h4 className="text-[color:var(--text-primary)]/80 font-medium mb-4">
                         {exp.company}
                       </h4>
                       {exp.description && (
                         <p className="text-sm text-[color:var(--text-primary)]/80 mb-4">
-                          {exp.description}
+                          {exp.description[language]}
                         </p>
                       )}
                       <ul
@@ -96,7 +101,7 @@ export default function Experience() {
         <div className="max-w-6xl mx-auto mt-8">
           <div className="p-2 md:p-4">
             <h3 className="text-sm text-center font-semibold uppercase tracking-[0.25em] text-white mb-4">
-              Tecnologias
+              {experience.technologiesTitle}
             </h3>
             <div className="flex flex-wrap justify-center gap-2">
               {allTechnologies.map((tech) => (
@@ -107,8 +112,8 @@ export default function Experience() {
         </div>
       </div>
       <div className="flex justify-center items-center mt-12">
-        <Button href="https://www.linkedin.com/in/anamartinsr/" icon={Linkedin}>
-          Ver minha jornada
+        <Button href={sharedSocialLinks.linkedin} icon={Linkedin}>
+          {experience.cta}
         </Button>
       </div>
     </section>

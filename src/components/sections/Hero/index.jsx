@@ -7,8 +7,13 @@ import BackgroundLight from "../../../assets/grainient-1774962431663.png";
 import IntroBadge from "./IntroBadge";
 import ScrollDownButton from "./ScrollDownButton";
 import Button from "../../ui/Button";
+import { getLanguageContent } from "../../../data/content";
+import { useLanguage } from "../../../context/LanguageContext";
 
 export default function Hero() {
+  const { language } = useLanguage();
+  const { hero } = getLanguageContent(language);
+
   const getTheme = () =>
     document.documentElement.getAttribute("data-theme") === "light"
       ? "light"
@@ -39,21 +44,24 @@ export default function Hero() {
       <img
         src={heroBackground}
         alt="Background"
-        className="hero-bg-image absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+        className="hero-bg-image absolute inset-0 h-full w-full object-cover transition-opacity duration-300"
       />
 
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <IntroBadge />
+        <IntroBadge
+          topText={hero.introBadge.top}
+          bottomText={hero.introBadge.bottom}
+        />
         <br />
-        <h1 className="text-5xl mb-8 font-bold text-[color:var(--hero-text)]">
-          Ana Martins
+        <h1 className="mb-8 text-5xl font-bold text-[color:var(--hero-text)]">
+          {hero.name}
         </h1>
-        <TrueFocus />
+        <TrueFocus sentence={hero.focusSentence} />
       </div>
 
-      <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center gap-5 justify-center">
+      <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center justify-center gap-5">
         <Button href="#projects" target="_self" icon={FaCode}>
-          Ver Projetos
+          {hero.cta}
         </Button>
         <ScrollDownButton />
       </div>

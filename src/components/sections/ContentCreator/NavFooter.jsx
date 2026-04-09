@@ -1,9 +1,13 @@
-import { navItems } from "../../../data/contentCreator";
+import { getLanguageContent } from "../../../data/content";
+import { useLanguage } from "../../../context/LanguageContext";
 
 export default function NavFooter() {
+  const { language } = useLanguage();
+  const { contentCreator } = getLanguageContent(language);
+
   return (
     <div className="grid grid-cols-5 gap-2 text-center text-[10px] text-[color:var(--text-primary)]/50">
-      {navItems.map((item) => (
+      {contentCreator.navItems.map((item) => (
         <span key={item} className="font-semibold text-[var(--primary-color)]">
           {item}
         </span>

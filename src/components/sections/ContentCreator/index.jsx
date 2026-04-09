@@ -3,14 +3,13 @@ import CreatorFloatingIcons from "./CreatorFloatingIcons";
 import FloatingCards from "./FloatingCards";
 import BackgroundBlurs from "../../illustration/BackgroundBlurs";
 import Title from "../../Title";
-import {
-  contentCreatorData,
-  floatingCardsData,
-  backgroundBlurs,
-} from "../../../data/contentCreator";
+import { backgroundBlurs } from "../../../data/contentCreator";
+import { getLanguageContent } from "../../../data/content";
+import { useLanguage } from "../../../context/LanguageContext";
 
 export default function ContentCreator() {
-  const { eyebrow, heading, highlight, description } = contentCreatorData;
+  const { language } = useLanguage();
+  const { contentCreator } = getLanguageContent(language);
 
   return (
     <section
@@ -23,15 +22,15 @@ export default function ContentCreator() {
         <div className="relative h-[680px] md:h-[720px]">
           <CreatorPhoneMockup />
           <CreatorFloatingIcons />
-          <FloatingCards cards={floatingCardsData} />
+          <FloatingCards cards={contentCreator.floatingCards} />
         </div>
 
         <div>
           <Title
-            eyebrow={eyebrow}
-            text={heading}
-            highlight={highlight}
-            description={description}
+            eyebrow={contentCreator.eyebrow}
+            text={contentCreator.heading}
+            highlight={contentCreator.highlight}
+            description={contentCreator.description}
             align="left"
           />
         </div>

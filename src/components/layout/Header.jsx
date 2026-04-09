@@ -2,21 +2,18 @@ import { useState, useEffect } from "react";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import SocialLinkedin from "../ui/SocialLinkedin";
 import SocialGitHub from "../ui/SocialGithub";
+import { getLanguageContent } from "../../data/content";
+import { useLanguage } from "../../context/LanguageContext";
 
 const THEME_STORAGE_KEY = "portfolio-theme";
-const NAV_LINKS = [
-  { href: "#hero", label: "Início" },
-  { href: "#about", label: "Sobre mim" },
-  { href: "#projects", label: "Projetos" },
-  { href: "#experience", label: "Experiência" },
-  { href: "#contact", label: "Contato" },
-];
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState("dark");
   const [activeSection, setActiveSection] = useState("hero");
+  const { language, toggleLanguage } = useLanguage();
+  const { header } = getLanguageContent(language);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 100);
@@ -43,7 +40,7 @@ export default function Header() {
   }, [theme]);
 
   useEffect(() => {
-    const sectionIds = NAV_LINKS.map(({ href }) => href.slice(1));
+    const sectionIds = header.navLinks.map(({ href }) => href.slice(1));
 
     const handleSectionTracking = () => {
       const marker = window.scrollY + window.innerHeight * 0.35;
@@ -67,7 +64,7 @@ export default function Header() {
       window.removeEventListener("scroll", handleSectionTracking);
       window.removeEventListener("resize", handleSectionTracking);
     };
-  }, []);
+  }, [header.navLinks]);
 
   const toggleTheme = () => {
     setTheme((currentTheme) => (currentTheme === "dark" ? "light" : "dark"));
@@ -88,7 +85,7 @@ export default function Header() {
         </div>
 
         <ul className="hidden md:flex space-x-6">
-          {NAV_LINKS.map(({ href, label }) => {
+          {header.navLinks.map(({ href, label }) => {
             const isActive = activeSection === href.slice(1);
 
             return (
@@ -96,7 +93,7 @@ export default function Header() {
                 <a
                   href={href}
                   onClick={() => setActiveSection(href.slice(1))}
-                  className={`relative py-2 px-3 font-semibold transition-colors
+                  className={`relative py-2 px-3 transition-colors
                            after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-[color:var(--header-underline)]
                            after:left-0 after:-bottom-1 after:transition-all after:duration-300
                            hover:after:w-full text-[color:var(--header-text)] ${
@@ -114,12 +111,27 @@ export default function Header() {
 
         <div className="flex items-center gap-3">
           <button
+            onClick={toggleLanguage}
+            className="text-[color:var(--header-text)] border border-[color:var(--header-text)]/30 rounded-full px-3 py-2 text-xs font-semibold cursor-pointer transition-all duration-200 hover:border-[color:var(--header-text-hover)] hover:text-[color:var(--header-text-hover)] hover:scale-105 active:scale-95"
+            aria-label={header.switchLanguageAriaLabel}
+            title={header.switchLanguageAriaLabel}
+          >
+            {header.switchLanguageLabel}
+          </button>
+
+          <button
             onClick={toggleTheme}
             className="text-[color:var(--header-text)] border border-[color:var(--header-text)]/30 rounded-full p-2 cursor-pointer transition-all duration-200 hover:border-[color:var(--header-text-hover)] hover:text-[color:var(--header-text-hover)] hover:scale-105 active:scale-95"
             aria-label={
-              theme === "dark" ? "Ativar modo claro" : "Ativar modo escuro"
+              theme === "dark"
+                ? header.toggleThemeAriaLabel
+                : header.toggleThemeAltAriaLabel
             }
-            title={theme === "dark" ? "Modo claro" : "Modo escuro"}
+            title={
+              theme === "dark"
+                ? header.toggleThemeTitle
+                : header.toggleThemeAltTitle
+            }
           >
             {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
           </button>
@@ -127,7 +139,9 @@ export default function Header() {
           <button
             onClick={() => setOpen(!open)}
             className="md:hidden text-[color:var(--header-text)]"
-            aria-label={open ? "Fechar menu" : "Abrir menu"}
+            aria-label={
+              open ? header.closeMenuAriaLabel : header.openMenuAriaLabel
+            }
           >
             {open ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -136,7 +150,7 @@ export default function Header() {
 
       {open && (
         <div className="md:hidden backdrop-blur-md bg-[color:var(--header-bg-mobile)] px-6 py-4 space-y-4">
-          {NAV_LINKS.map(({ href, label }) => {
+          {header.navLinks.map(({ href, label }) => {
             const isActive = activeSection === href.slice(1);
 
             return (

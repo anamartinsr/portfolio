@@ -1,9 +1,13 @@
-import { Link } from "react-router-dom";
 import { ArrowLeft, AlertTriangle } from "lucide-react";
 import Button from "../components/ui/Button";
 import floatingLinesBackground from "../assets/light-pillar-1775069855742.png";
+import { getLanguageContent } from "../data/content";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function NotFound() {
+  const { language } = useLanguage();
+  const { notFound } = getLanguageContent(language);
+
   const blueprintGridStyle = {
     backgroundImage:
       "linear-gradient(to right, rgba(72, 71, 74, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(72, 71, 74, 0.05) 1px, transparent 1px)",
@@ -51,11 +55,11 @@ export default function NotFound() {
               <div className="h-2 w-2 rounded-full bg-[rgba(223,142,255,0.5)]" />
             </div>
             <div className="font-mono text-[11px] text-[rgba(223,142,255,0.8)]">
-              {"> REQUEST_PATH: /unknown-route"}
+              {notFound.requestPath}
               <br />
-              {"> STATUS_CODE: 404_NOT_FOUND"}
+              {notFound.statusCode}
               <br />
-              {"> REDIRECT_HOME: AVAILABLE"}
+              {notFound.redirectHome}
             </div>
           </div>
 
@@ -93,15 +97,13 @@ export default function NotFound() {
             <AlertTriangle className="h-4 w-4 text-(--button-text)" />
 
             <span className="font-light text-xs tracking-widest text-[#f6f3f5]">
-              Pagina Não Encontrada
+              {notFound.label}
             </span>
           </div>
 
-          {/* <h2 className="text-3xl text-(--white)">Pagina Não Encontrada</h2> */}
-
-          <Link to="/" className="cursor-pointer">
-            <Button icon={ArrowLeft}>Voltar para a página inicial</Button>
-          </Link>
+          <Button to="/" target="_self" icon={ArrowLeft}>
+            {notFound.backButton}
+          </Button>
         </div>
       </main>
 

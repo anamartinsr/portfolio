@@ -15,9 +15,9 @@ export default function Home() {
       <div className="bg-(--scrol-bg)">
         <LogoLoop
           logos={techLogos}
-          speed={90}
+          speed={85}
           direction="left"
-          logoHeight={48}
+          logoHeight={30}
           gap={40}
           pauseOnHover
           scaleOnHover

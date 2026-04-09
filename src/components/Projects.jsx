@@ -1,17 +1,18 @@
 import { SiGithub } from "react-icons/si";
 import { FiGlobe } from "react-icons/fi";
 import Title from "./Title";
-import projects from "../data/projects";
 import Button from "./ui/Button";
 import BadgeTech from "./ui/BadgeTech";
+import { getLanguageContent, sharedSocialLinks } from "../data/content";
+import { useLanguage } from "../context/LanguageContext";
 
-function ProjectCard({ project, reverse }) {
+function ProjectCard({ project, reverse, language, copy }) {
   return (
     <div className="grid md:grid-cols-2 gap-12 items-center relative overflow-visible">
       <div className={reverse ? "md:order-2" : ""}>
         <img
           src={project.img}
-          alt={project.title}
+          alt={project.title[language]}
           loading="lazy"
           decoding="async"
           className="rounded-lg shadow-2xl w-full object-cover"
@@ -19,23 +20,23 @@ function ProjectCard({ project, reverse }) {
       </div>
 
       <div className="space-y-4 relative ">
-        <h3 className="text-3xl text-(--white)">{project.title}</h3>
+        <h3 className="text-3xl text-(--white)">{project.title[language]}</h3>
 
         <div
           className={`bg-[color:var(--card-soft)] backdrop-blur-md rounded-lg p-6 shadow-lg text-center space-y-4 z-10 ${reverse ? "-mr-20" : "-ml-20"}`}
         >
-          <p className="leading-relaxed">{project.description}</p>
+          <p className="leading-relaxed">{project.description[language]}</p>
 
           <div className="flex justify-center gap-4 mt-2 flex-wrap">
             {project.codeLink && (
               <Button href={project.codeLink} icon={SiGithub}>
-                Ver código
+                {copy.codeButton}
               </Button>
             )}
 
             {project.projectLink && (
               <Button href={project.projectLink} icon={FiGlobe}>
-                Ver site
+                {copy.siteButton}
               </Button>
             )}
           </div>
@@ -52,6 +53,9 @@ function ProjectCard({ project, reverse }) {
 }
 
 export default function Projects() {
+  const { language } = useLanguage();
+  const { projects: projectContent } = getLanguageContent(language);
+
   return (
     <section
       id="projects"
@@ -59,24 +63,26 @@ export default function Projects() {
     >
       <div className="max-w-7xl mx-auto relative z-10">
         <Title
-          eyebrow="Portfólio"
-          text="Projetos"
-          description="Projetos que desenvolvi aplicando na prática conceitos de desenvolvimento, arquitetura e tecnologia."
+          eyebrow={projectContent.eyebrow}
+          text={projectContent.text}
+          description={projectContent.description}
         />
 
         <div className="max-w-6xl mx-auto space-y-24">
-          {projects.map((project, idx) => (
+          {projectContent.projects.map((project, idx) => (
             <ProjectCard
-              key={project.title}
+              key={project.title[language]}
               project={project}
+              language={language}
+              copy={projectContent}
               reverse={idx % 2 !== 0}
             />
           ))}
         </div>
 
         <div className="flex justify-center items-center mt-20">
-          <Button href="https://github.com/anamartinsr" icon={SiGithub}>
-            Ver mais projetos
+          <Button href={sharedSocialLinks.github} icon={SiGithub}>
+            {projectContent.cta}
           </Button>
         </div>
       </div>
