@@ -109,16 +109,48 @@ export default function Header() {
           })}
         </ul>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
+          <span
+            className={`text-[11px] font-semibold transition-colors ${
+              language === "pt" ? "text-gray-300" : "text-gray-400"
+            }`}
+          >
+            PT
+          </span>
+
           <button
             onClick={toggleLanguage}
-            className="text-[color:var(--header-text)] border border-[color:var(--header-text)]/30 rounded-full px-3 py-2 text-xs font-semibold cursor-pointer transition-all duration-200 hover:border-[color:var(--header-text-hover)] hover:text-[color:var(--header-text-hover)] hover:scale-105 active:scale-95"
+            className="relative w-14 h-7 rounded-full overflow-hidden cursor-pointer transition-all duration-300
+               shadow-inner bg-gray-200"
             aria-label={header.switchLanguageAriaLabel}
-            title={header.switchLanguageAriaLabel}
           >
-            {header.switchLanguageLabel}
+            <div
+              className={`absolute inset-0 bg-cover bg-center transition-all duration-300
+                  opacity-90`}
+              style={{
+                backgroundImage:
+                  language === "pt"
+                    ? "url('https://flagcdn.com/w320/br.png')"
+                    : "url('https://flagcdn.com/w320/gb.png')",
+              }}
+            />
+
+            <div className="absolute inset-0 rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.25),inset_0_-2px_4px_rgba(255,255,255,0.3)]" />
+
+            <div
+              className={`absolute top-0.5 left-0.5 w-6 h-6 bg-white rounded-full transition-all duration-300
+                  shadow-[0_2px_6px_rgba(0,0,0,0.35)]
+                  ${language === "pt" ? "translate-x-0" : "translate-x-7"}`}
+            />
           </button>
 
+          <span
+            className={`text-[11px] font-semibold transition-colors ${
+              language === "en" ? "text-gray-300" : "text-gray-500"
+            }`}
+          >
+            EN
+          </span>
           <button
             onClick={toggleTheme}
             className="text-[color:var(--header-text)] border border-[color:var(--header-text)]/30 rounded-full p-2 cursor-pointer transition-all duration-200 hover:border-[color:var(--header-text-hover)] hover:text-[color:var(--header-text-hover)] hover:scale-105 active:scale-95"

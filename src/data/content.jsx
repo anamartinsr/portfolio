@@ -1,14 +1,16 @@
 import Tecnologym from "../assets/tecnologym.png";
 import UrlShortener from "../assets/url_shortener.png";
 import DocuSend from "../assets/docusend.png";
+import { Linkedin, Mail, MapPin } from "lucide-react";
 
 export const sharedSocialLinks = {
   tiktok: "https://www.tiktok.com/@anamartins.dev",
-  youtube: "https://www.youtube.com/",
+  youtube: "https://www.youtube.com/@anamartinsdev",
   github: "https://github.com/anamartinsr",
   linkedin: "https://linkedin.com/in/anamartinsr/",
   instagram: "https://www.instagram.com/anamartins.dev",
   x: "https://x.com/anamartinsdev",
+  linktree: "https://linktr.ee/anamartinsr",
 };
 
 const sharedTechCategories = [
@@ -221,11 +223,13 @@ const sharedContactInfo = {
     value: "martinnrs.ana@gmail.com",
     href: "mailto:martinnrs.ana@gmail.com",
     highlight: true,
+    icon: <Mail />,
   },
   linkedin: {
     title: { pt: "LinkedIn", en: "LinkedIn" },
     value: "Ana Martins",
     href: sharedSocialLinks.linkedin,
+    icon: <Linkedin />,
   },
   location: {
     title: { pt: "Localização", en: "Location" },
@@ -233,6 +237,7 @@ const sharedContactInfo = {
       pt: "Belo Horizonte - MG, Brasil",
       en: "Belo Horizonte - MG, Brazil",
     },
+    icon: <MapPin />,
     description: "",
     href: null,
   },
@@ -252,11 +257,11 @@ const sharedContentCreator = {
     tabInactive: { pt: "Explorar", en: "Explore" },
     communityLabel: { pt: "Minha Comunidade", en: "My Community" },
     post: {
-      author: "Jackie Jones",
+      author: "Ana Martins",
       timeAgo: "30 mins",
       content: {
-        pt: "Doctors, scientists, intelligence agents and government officials have all been trying to find out...",
-        en: "Doctors, scientists, intelligence agents and government officials have all been trying to find out...",
+        pt: "Programação e Tecnologia",
+        en: "Programming and Technology",
       },
     },
   },
@@ -273,7 +278,7 @@ const sharedContentCreator = {
       {
         id: "mana",
         type: "message",
-        author: "Mana",
+        author: "userDev",
         content:
           "Ótimo conteudo, Ana! Adorei as dicas sobre arquitetura de software.",
         position: "right-4 top-20",
@@ -292,7 +297,7 @@ const sharedContentCreator = {
       {
         id: "mana",
         type: "message",
-        author: "Mana",
+        author: "userDev",
         content: "Great content, Ana! Loved the tips on software architecture.",
         position: "right-4 top-20",
       },
@@ -571,11 +576,13 @@ export const contentByLanguage = {
           value: "martinnrs.ana@gmail.com",
           href: "mailto:martinnrs.ana@gmail.com",
           highlight: true,
+          icon: <Mail />,
         },
         linkedin: {
           title: { pt: "LinkedIn", en: "LinkedIn" },
           value: "Ana Martins",
           href: sharedSocialLinks.linkedin,
+          icon: <Linkedin />,
         },
         location: {
           title: { pt: "Localização", en: "Location" },
@@ -585,6 +592,7 @@ export const contentByLanguage = {
           },
           description: "",
           href: null,
+          icon: <MapPin />,
         },
       },
     },
