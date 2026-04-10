@@ -135,11 +135,14 @@ export default function Header() {
               }}
             />
 
-            <div className="absolute inset-0 rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.25),inset_0_-2px_4px_rgba(255,255,255,0.3)]" />
+            <div
+              className="absolute inset-0 rounded-full 
+  shadow-[inset_0_9px_6px_rgba(0,0,0,0.35),inset_0_-2px_3px_rgba(255,255,255,0.4)]"
+            />
 
             <div
               className={`absolute top-0.5 left-0.5 w-6 h-6 bg-white rounded-full transition-all duration-300
-                  shadow-[0_2px_6px_rgba(0,0,0,0.35)]
+                  shadow-[0_10px_10px_rgba(0,0,0,0.35)]
                   ${language === "pt" ? "translate-x-0" : "translate-x-7"}`}
             />
           </button>
