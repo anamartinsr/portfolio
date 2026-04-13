@@ -72,7 +72,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full  top-0 left-0 z-50 transition-all duration-300 ${
+      className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${
         scrolled
           ? "backdrop-blur-md bg-[color:var(--header-bg-scrolled)] shadow-sm"
           : "bg-transparent"
@@ -93,7 +93,7 @@ export default function Header() {
                 <a
                   href={href}
                   onClick={() => setActiveSection(href.slice(1))}
-                  className={`relative py-2 px-3 transition-colors
+                  className={`relative py-2 px-2 text-sm transition-colors
                            after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-[color:var(--header-underline)]
                            after:left-0 after:-bottom-1 after:transition-all after:duration-300
                            hover:after:w-full text-[color:var(--header-text)] ${
@@ -112,7 +112,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <span
             className={`text-[11px] font-semibold transition-colors ${
-              language === "pt" ? "text-gray-300" : "text-gray-400"
+              language === "pt" ? "text-gray-100" : "text-gray-400"
             }`}
           >
             PT
@@ -149,7 +149,7 @@ export default function Header() {
 
           <span
             className={`text-[11px] font-semibold transition-colors ${
-              language === "en" ? "text-gray-300" : "text-gray-500"
+              language === "en" ? "text-gray-100" : "text-gray-400"
             }`}
           >
             EN
