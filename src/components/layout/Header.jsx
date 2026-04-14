@@ -96,7 +96,7 @@ export default function Header() {
                   className={`relative py-2 px-2 text-sm transition-colors
                            after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-[color:var(--header-underline)]
                            after:left-0 after:-bottom-1 after:transition-all after:duration-300
-                           hover:after:w-full text-[color:var(--header-text)] ${
+                           hover:after:w-full text-[color:var(--header-text)] rounded-md hover:bg-[color:var(--header-hover-bg)] ${
                              isActive
                                ? "after:w-full"
                                : "hover:text-[color:var(--header-text-hover)]"

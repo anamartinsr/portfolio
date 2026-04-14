@@ -23,7 +23,7 @@ function ProjectCard({ project, reverse, language, copy }) {
         <h3 className="text-3xl text-(--white)">{project.title[language]}</h3>
 
         <div
-          className={`bg-[color:var(--card-soft)] backdrop-blur-md rounded-lg p-6 shadow-lg text-center space-y-4 z-10 ${reverse ? "-mr-20" : "-ml-20"}`}
+          className={`bg-[color:var(--card-soft)] backdrop-blur-md rounded-lg p-6 shadow-lg text-center space-y-4 z-10 ${reverse ? "-mr-5" : "-ml-5"}`}
         >
           <p className="leading-relaxed">{project.description[language]}</p>
 

@@ -46,8 +46,9 @@
   --header-bg-scrolled: rgba(79, 29, 149, 0.5);
   --header-bg-mobile: rgba(19, 4, 40, 0.6);
   --header-text: var(--white);
-  --header-text-hover: var(--purple-0);
-  --header-underline: var(--purple-0);
+  --header-text-hover: #fde7ff;
+  --header-underline: #f4c5ff;
+  --header-hover-bg: rgba(255, 255, 255, 0.14);
   --footer-bg: #000000;
   --footer-border: #1f2937;
   --footer-text: #9ca3af;
@@ -92,7 +93,9 @@
   --surface-glass-border: rgba(17, 24, 39, 0.08);
   --header-bg-mobile: transparent;
   --header-text: #ffffff;
-  --header-underline: #ffffff;
+  --header-text-hover: #fff4c2;
+  --header-underline: #ffe08a;
+  --header-hover-bg: rgba(255, 255, 255, 0.2);
   --footer-bg: #eef2f8;
   --footer-border: #d1d5db;
   --footer-text: #4b5563;

@@ -15,8 +15,14 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-4">
         <div className="md:col-span-2 flex flex-col items-start gap-4">
           <div className="flex gap-4">
-            <SocialGitHub size={40} />
-            <SocialLinkedin size={40} />
+            <SocialGitHub
+              size={40}
+              className="text-[color:var(--footer-text)] hover:text-[color:var(--text-primary)] transition-colors"
+            />
+            <SocialLinkedin
+              size={40}
+              className="text-[color:var(--footer-text)] hover:text-[color:var(--text-primary)] transition-colors"
+            />
           </div>
 
           <div className="flex items-center gap-2">
