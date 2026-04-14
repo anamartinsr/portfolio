@@ -21,9 +21,6 @@ function MessageCard({ author, content, position }) {
             <path d="M5 19c1.9-3.6 4.2-5.2 7-5.2s5.1 1.6 7 5.2" />
           </svg>
         </div>
-        <p className="text-sm font-semibold text-[color:var(--text-primary)]">
-          {author}
-        </p>
       </div>
       <p className="text-sm leading-relaxed text-[color:var(--text-muted-foreground)]">
         {content}

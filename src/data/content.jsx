@@ -278,7 +278,6 @@ const sharedContentCreator = {
       {
         id: "mana",
         type: "message",
-        author: "userDev",
         content:
           "Ótimo conteudo, Ana! Adorei as dicas sobre arquitetura de software.",
         position: "right-4 top-20",
@@ -297,7 +296,6 @@ const sharedContentCreator = {
       {
         id: "mana",
         type: "message",
-        author: "userDev",
         content: "Great content, Ana! Loved the tips on software architecture.",
         position: "right-4 top-20",
       },
