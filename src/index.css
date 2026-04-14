@@ -39,6 +39,7 @@
   --shadow-glow: 0 0 40px rgba(114, 23, 199, 0.4);
 
   --bg-page: var(--purple-3);
+  --circular-text: #ffffff;
   --text-primary: var(--white);
   --text-muted-foreground: #aaa;
   --surface-glass: rgba(255, 255, 255, 0.03);
@@ -88,6 +89,7 @@
 
   --bg-page: #f8faff;
   --text-primary: #111827;
+  --circular-text: #7217c7;
   --text-muted-foreground: #6b7280;
   --surface-glass: rgba(17, 24, 39, 0.03);
   --surface-glass-border: rgba(17, 24, 39, 0.08);
@@ -111,7 +113,6 @@
   --hero-text: #ffffff;
   --hero-focus-text: #ffffff;
   --hero-arrow: #7217c7;
-  --scrol-bg: #7217c7;
 }
 
 body {
@@ -189,6 +190,61 @@ label {
 
 .shadow-glow {
   box-shadow: var(--shadow-glow);
+}
+
+.section-divider {
+  position: relative;
+  height: 96px;
+  overflow: hidden;
+  margin-top: -1px;
+  background: #7217c7;
+}
+
+.section-divider svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.section-divider path {
+  fill: #1d0087;
+}
+
+.section-divider.inverted path {
+  fill: #000000;
+}
+
+.shape {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.shape.circle {
+  width: 34px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--color-accent);
+  top: 28px;
+  left: 12%;
+}
+
+.shape.square {
+  width: 22px;
+  aspect-ratio: 1;
+  background: var(--color-surface);
+  border: 3px solid var(--color-accent);
+  top: 18px;
+  right: 18%;
+  transform: rotate(30deg);
+}
+
+.shape.triangle {
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-bottom: 30px solid var(--color-accent);
+  bottom: 10px;
+  right: 8%;
 }
 
 @keyframes float {

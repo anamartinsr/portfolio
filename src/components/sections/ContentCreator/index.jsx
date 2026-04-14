@@ -14,7 +14,7 @@ export default function ContentCreator() {
   return (
     <section
       id="content-creator"
-      className="relative overflow-hidden bg-[color:var(--black)] py-24 px-6 md:px-16"
+      className="relative overflow-hidden bg-[color:var(--black)] py-20 px-6 md:px-16"
     >
       <BackgroundBlurs blurs={backgroundBlurs} />
 

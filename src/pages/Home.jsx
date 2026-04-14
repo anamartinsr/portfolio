@@ -1,5 +1,4 @@
-import Projects from "../components/Projects.jsx";
-
+import Projects from "../components/sections/Projects/index.jsx";
 import LogoLoop from "../components/ui/LogoLoop.jsx";
 import About from "../components/sections/About/index.jsx";
 import Hero from "../components/sections/Hero/index.jsx";
@@ -26,12 +25,7 @@ export default function Home() {
           ariaLabel="Technology partners"
         />
       </div>
-      {/* <div>
-        <img src={path} alt="Separador" className="w-full block" />
-      </div> */}
-
       <About />
-
       <Projects />
       <ContentCreator />
       <Experience />

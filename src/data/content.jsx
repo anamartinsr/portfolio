@@ -71,8 +71,8 @@ const sharedExperience = [
     company: "CIEEMG",
     period: { pt: "Mar 2026 - Presente", en: "Mar 2026 - Present" },
     description: {
-      pt: "Colaboro na organização e padronização dos projetos, participando de code reviews e decisões técnicas. Responsável pelo desenvolvimento e evolução de sistemas internos e externos com foco em automação e integrações entre serviços.",
-      en: "I help organize and standardize projects, taking part in code reviews and technical decisions. Responsible for building and evolving internal and external systems with a focus on automation and service integrations.",
+      pt: "Atuo com maior autonomia técnica no desenvolvimento de aplicações full stack, colaborando em decisões de arquiteturas, definição de padrões de projeto e no desenvolvimento e evolução de sistemas internos e externos com foco em automação e integrações entre serviços.",
+      en: "I work with greater technical autonomy in the development of full-stack applications, collaborating in architectural decisions, defining design patterns, and developing and evolving internal and external systems with a focus on automation and service integrations.",
     },
     technologies: [],
     highlights: [],

@@ -1,5 +1,4 @@
 import { Search } from "lucide-react";
-import ColoredAvatarCircles from "./ColoredAvatarCircles";
 import CommunityPost from "./CommunityPost";
 import NavFooter from "./NavFooter";
 import GradientCard from "./GradientCard";
@@ -31,7 +30,6 @@ export default function CreatorPhoneMockup() {
 
         <div className="mb-4 border-b border-[color:var(--surface-glass-border)] pb-3">
           <Heading size="md">{communityMockup.communityLabel}</Heading>
-          <ColoredAvatarCircles />
         </div>
 
         <CommunityPost />

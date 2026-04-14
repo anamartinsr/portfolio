@@ -1,11 +1,3 @@
-export const communityColors = [
-  "var(--community-avatar-1)",
-  "var(--community-avatar-2)",
-  "var(--community-avatar-3)",
-  "var(--community-avatar-4)",
-  "var(--community-avatar-5)",
-];
-
 export const backgroundBlurs = [
   {
     position: "absolute -top-24 -left-24",
