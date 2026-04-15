@@ -6,7 +6,7 @@ export default function PostActions() {
   const { contentCreator } = getLanguageContent(language);
 
   return (
-    <div className="flex gap-4 text-xs text-[color:var(--text-primary)]/55">
+    <div className="flex gap-4 text-xs text-[color:var(--color-text-primary)]/55">
       {contentCreator.actions.map((action) => (
         <span key={action}>{action}</span>
       ))}
