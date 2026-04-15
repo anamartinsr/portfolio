@@ -1,10 +1,12 @@
 import { SiGithub } from "react-icons/si";
-import Title from "../../Title";
+import Title from "../../ui/Title";
 import Button from "../../ui/Button";
 import { getLanguageContent, sharedSocialLinks } from "../../../data/content";
 import { useLanguage } from "../../../context/LanguageContext";
 import Divider from "../../ui/Divider";
 import ProjectCard from "./ProjectCard";
+import BackgroundBlurs from "../../illustration/BackgroundBlurs";
+import { backgroundBlurs } from "../../../data/contentCreator";
 
 export default function Projects() {
   const { language } = useLanguage();
@@ -17,6 +19,8 @@ export default function Projects() {
         className="w-full text-center py-10 px-6 md:px-20 relative overflow-hidden"
       >
         <div className="max-w-7xl mx-auto relative z-10">
+          <BackgroundBlurs blurs={backgroundBlurs} />
+
           <Title
             eyebrow={projectContent.eyebrow}
             text={projectContent.text}

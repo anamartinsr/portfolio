@@ -39,7 +39,7 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className="relative h-screen overflow-hidden bg-[color:var(--hero-bg)]"
+      className="relative h-screen overflow-hidden bg-[color:var(--color-hero-bg)]"
     >
       <img
         src={heroBackground}
@@ -53,7 +53,7 @@ export default function Hero() {
           bottomText={hero.introBadge.bottom}
         />
         <br />
-        <h1 className="mb-8 text-5xl font-bold text-[color:var(--hero-text)]">
+        <h1 className="mb-8 text-5xl font-bold text-[color:var(--color-hero-text)]">
           {hero.name}
         </h1>
         <TrueFocus sentence={hero.focusSentence} />
