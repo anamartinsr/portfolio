@@ -85,7 +85,7 @@ const CircularText = ({
 
   return (
     <motion.div
-      className={`m-0 mx-auto rounded-full w-[200px] h-[200px] relative text-(--circular-text) font-black text-center cursor-pointer origin-center ${className}`}
+      className={`m-0 mx-auto rounded-full w-[200px] h-[200px] relative text-[color:var(--color-circular-text)] font-black text-center cursor-pointer origin-center ${className}`}
       style={{ rotate: rotation }}
       initial={{ rotate: 0 }}
       animate={controls}
