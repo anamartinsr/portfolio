@@ -74,7 +74,7 @@ export default function Header() {
     <header
       className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "backdrop-blur-md bg-[color:var(--header-bg-scrolled)] shadow-sm"
+          ? "backdrop-blur-md bg-[color:var(--color-header-bg-scrolled)] shadow-sm"
           : "bg-transparent"
       }`}
     >
@@ -94,12 +94,12 @@ export default function Header() {
                   href={href}
                   onClick={() => setActiveSection(href.slice(1))}
                   className={`relative py-2 px-2 text-sm transition-colors
-                           after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-[color:var(--header-underline)]
+                           after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-[color:var(--color-header-underline)]
                            after:left-0 after:-bottom-1 after:transition-all after:duration-300
-                           hover:after:w-full text-[color:var(--header-text)] rounded-md hover:bg-[color:var(--header-hover-bg)] ${
+                           hover:after:w-full text-[color:var(--color-header-text)] rounded-md hover:bg-[color:var(--color-header-hover-bg)] ${
                              isActive
                                ? "after:w-full"
-                               : "hover:text-[color:var(--header-text-hover)]"
+                               : "hover:text-[color:var(--color-header-text-hover)]"
                            }`}
                 >
                   {label}
@@ -156,7 +156,7 @@ export default function Header() {
           </span>
           <button
             onClick={toggleTheme}
-            className="text-[color:var(--header-text)] border border-[color:var(--header-text)]/30 rounded-full p-2 cursor-pointer transition-all duration-200 hover:border-[color:var(--header-text-hover)] hover:text-[color:var(--header-text-hover)] hover:scale-105 active:scale-95"
+            className="text-[color:var(--color-header-text)] border border-[color:var(--color-header-text)]/30 rounded-full p-2 cursor-pointer transition-all duration-200 hover:border-[color:var(--color-header-text-hover)] hover:text-[color:var(--color-header-text-hover)] hover:scale-105 active:scale-95"
             aria-label={
               theme === "dark"
                 ? header.toggleThemeAriaLabel
@@ -173,7 +173,7 @@ export default function Header() {
 
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-[color:var(--header-text)]"
+            className="md:hidden text-[color:var(--color-header-text)]"
             aria-label={
               open ? header.closeMenuAriaLabel : header.openMenuAriaLabel
             }
@@ -184,7 +184,7 @@ export default function Header() {
       </nav>
 
       {open && (
-        <div className="md:hidden backdrop-blur-md bg-[color:var(--header-bg-mobile)] px-6 py-4 space-y-4">
+        <div className="md:hidden backdrop-blur-md bg-[color:var(--color-header-bg-mobile)] px-6 py-4 space-y-4">
           {header.navLinks.map(({ href, label }) => {
             const isActive = activeSection === href.slice(1);
 
@@ -198,8 +198,8 @@ export default function Header() {
                 }}
                 className={`block transition-colors ${
                   isActive
-                    ? "text-(--primary-color)"
-                    : "text-[color:var(--header-text)] hover:text-[color:var(--header-text-hover)]"
+                    ? "text-[color:var(--color-primary)]"
+                    : "text-[color:var(--color-header-text)] hover:text-[color:var(--color-header-text-hover)]"
                 }`}
               >
                 {label}

@@ -11,17 +11,17 @@ export default function Footer() {
   const footerColumns = footer.columns;
 
   return (
-    <footer className="bg-[color:var(--footer-bg)] text-[color:var(--footer-text)] py-12 border-t border-[color:var(--footer-border)] relative">
+    <footer className="bg-[color:var(--color-footer-bg)] text-[color:var(--color-footer-text)] py-12 border-t border-[color:var(--color-footer-border)] relative">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-4">
         <div className="md:col-span-2 flex flex-col items-start gap-4">
           <div className="flex gap-4">
             <SocialGitHub
               size={40}
-              className="text-[color:var(--footer-text)] hover:text-[color:var(--text-primary)] transition-colors"
+              className="text-[color:var(--color-footer-text)] hover:text-[color:var(--color-text-primary)] transition-colors"
             />
             <SocialLinkedin
               size={40}
-              className="text-[color:var(--footer-text)] hover:text-[color:var(--text-primary)] transition-colors"
+              className="text-[color:var(--color-footer-text)] hover:text-[color:var(--color-text-primary)] transition-colors"
             />
           </div>
 
@@ -65,7 +65,7 @@ export default function Footer() {
             {column.id === "contact" && (
               <button
                 onClick={() => ScrollToSection(footer.backToTopTarget)}
-                className="flex items-center gap-1 text-xs text-[color:var(--footer-text)] hover:text-(--white) mt-2 animate-bounce text-muted-foreground transition-colors cursor-pointer"
+                className="flex items-center gap-1 text-xs text-[color:var(--color-footer-text)] hover:text-[color:var(--color-text-primary)] mt-2 animate-bounce text-muted-foreground transition-colors cursor-pointer"
               >
                 <ArrowUp size={16} /> {footer.backToTopLabel}
               </button>
@@ -74,9 +74,9 @@ export default function Footer() {
         ))}
       </div>
 
-      <div className="mx-auto mt-6 h-px w-full max-w-6xl bg-[color:var(--footer-border)]" />
+      <div className="mx-auto mt-6 h-px w-full max-w-6xl bg-[color:var(--color-footer-border)]" />
 
-      <div className="max-w-6xl mx-auto px-6 mt-4 text-center text-xs text-[color:var(--footer-text-muted)]">
+      <div className="max-w-6xl mx-auto px-6 mt-4 text-center text-xs text-[color:var(--color-footer-text-muted)]">
         © {new Date().getFullYear()} {footer.copyrightOwner} -{" "}
         {footer.rightsText}
       </div>

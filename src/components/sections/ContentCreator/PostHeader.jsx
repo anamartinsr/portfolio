@@ -9,10 +9,12 @@ export default function PostHeader({ author, timeAgo }) {
         className="h-10 w-10 rounded-full object-cover"
       />
       <div>
-        <p className="text-base font-bold text-[color:var(--text-primary)]">
+        <p className="text-base font-bold text-[color:var(--color-text-primary)]">
           {author}
         </p>
-        <p className="text-xs text-[color:var(--text-primary)]/55">{timeAgo}</p>
+        <p className="text-xs text-[color:var(--color-text-primary)]/55">
+          {timeAgo}
+        </p>
       </div>
     </div>
   );
