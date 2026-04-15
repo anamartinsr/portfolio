@@ -427,7 +427,7 @@ export const contentByLanguage = {
           positionClass: "absolute -right-20 -top-8 z-20",
           outerSizeClass: "h-20 w-20 md:h-24 md:w-24",
           innerSizeClass: "h-12 w-12 md:h-14 md:w-14",
-          innerStyle: { backgroundColor: "#000000" },
+          innerStyle: { backgroundColor: "var(--color-social-tiktok-bg)" },
           href: sharedSocialLinks.tiktok,
           label: "Abrir TikTok",
           icon: "tiktok",
@@ -438,7 +438,7 @@ export const contentByLanguage = {
           positionClass: "absolute -right-12 bottom-2 z-20",
           outerSizeClass: "h-14 w-14 md:h-16 md:w-16",
           innerSizeClass: "h-9 w-9 md:h-10 md:w-10",
-          innerStyle: { backgroundColor: "#FF0000" },
+          innerStyle: { backgroundColor: "var(--color-social-youtube-bg)" },
           href: sharedSocialLinks.youtube,
           label: "Abrir YouTube",
           icon: "youtube",
@@ -449,7 +449,7 @@ export const contentByLanguage = {
           positionClass: "absolute -left-6 bottom-16 z-20",
           outerSizeClass: "h-14 w-14 md:h-16 md:w-16",
           innerSizeClass: "h-9 w-9 md:h-10 md:w-10",
-          innerStyle: { backgroundColor: "#24292f" },
+          innerStyle: { backgroundColor: "var(--color-social-github-bg)" },
           href: sharedSocialLinks.github,
           label: "Abrir GitHub",
           icon: "github",
@@ -461,8 +461,7 @@ export const contentByLanguage = {
           outerSizeClass: "h-20 w-20 md:h-24 md:w-24",
           innerSizeClass: "h-12 w-12 md:h-14 md:w-14",
           innerStyle: {
-            background:
-              "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)",
+            background: "var(--color-social-instagram-bg)",
           },
           href: sharedSocialLinks.instagram,
           label: "Abrir Instagram",
@@ -485,7 +484,8 @@ export const contentByLanguage = {
           title: "Navegação",
           links: sharedFooter.navLinks.pt,
           columnClassName: "flex flex-col gap-3 text-sm font-medium",
-          linkClassName: "hover:text-(--white) transition",
+          linkClassName:
+            "hover:text-[color:var(--color-text-primary)] transition",
         },
         {
           id: "contact",
@@ -497,7 +497,8 @@ export const contentByLanguage = {
             },
           ],
           columnClassName: "flex flex-col gap-2 text-sm",
-          linkClassName: "hover:text-(--white) transition",
+          linkClassName:
+            "hover:text-[color:var(--color-text-primary)] transition",
         },
       ],
     },
@@ -619,7 +620,7 @@ export const contentByLanguage = {
           positionClass: "absolute -right-20 -top-8 z-20",
           outerSizeClass: "h-20 w-20 md:h-24 md:w-24",
           innerSizeClass: "h-12 w-12 md:h-14 md:w-14",
-          innerStyle: { backgroundColor: "#000000" },
+          innerStyle: { backgroundColor: "var(--color-social-tiktok-bg)" },
           href: sharedSocialLinks.tiktok,
           label: "Open TikTok",
           icon: "tiktok",
@@ -630,7 +631,7 @@ export const contentByLanguage = {
           positionClass: "absolute -right-12 bottom-2 z-20",
           outerSizeClass: "h-14 w-14 md:h-16 md:w-16",
           innerSizeClass: "h-9 w-9 md:h-10 md:w-10",
-          innerStyle: { backgroundColor: "#FF0000" },
+          innerStyle: { backgroundColor: "var(--color-social-youtube-bg)" },
           href: sharedSocialLinks.youtube,
           label: "Open YouTube",
           icon: "youtube",
@@ -641,7 +642,7 @@ export const contentByLanguage = {
           positionClass: "absolute -left-6 bottom-16 z-20",
           outerSizeClass: "h-14 w-14 md:h-16 md:w-16",
           innerSizeClass: "h-9 w-9 md:h-10 md:w-10",
-          innerStyle: { backgroundColor: "#24292f" },
+          innerStyle: { backgroundColor: "var(--color-social-github-bg)" },
           href: sharedSocialLinks.github,
           label: "Open GitHub",
           icon: "github",
@@ -653,8 +654,7 @@ export const contentByLanguage = {
           outerSizeClass: "h-20 w-20 md:h-24 md:w-24",
           innerSizeClass: "h-12 w-12 md:h-14 md:w-14",
           innerStyle: {
-            background:
-              "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)",
+            background: "var(--color-social-instagram-bg)",
           },
           href: sharedSocialLinks.instagram,
           label: "Open Instagram",
@@ -677,7 +677,8 @@ export const contentByLanguage = {
           title: "Navigation",
           links: sharedFooter.navLinks.en,
           columnClassName: "flex flex-col gap-3 text-sm font-medium",
-          linkClassName: "hover:text-(--white) transition",
+          linkClassName:
+            "hover:text-[color:var(--color-text-primary)] transition",
         },
         {
           id: "contact",
@@ -689,7 +690,8 @@ export const contentByLanguage = {
             },
           ],
           columnClassName: "flex flex-col gap-2 text-sm",
-          linkClassName: "hover:text-(--white) transition",
+          linkClassName:
+            "hover:text-[color:var(--color-text-primary)] transition",
         },
       ],
     },

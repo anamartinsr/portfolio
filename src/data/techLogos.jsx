@@ -1,16 +1,16 @@
 const getTechLogoColor = () => {
-  if (typeof document === "undefined") return "000000";
+  if (typeof document === "undefined") return "#7217c7";
 
   const rootStyles = getComputedStyle(document.documentElement);
   const color =
-    rootStyles.getPropertyValue("--scrol-bg").trim() ||
-    rootStyles.getPropertyValue("--black").trim() ||
-    "#000000";
+    rootStyles.getPropertyValue("--color-primary").trim() ||
+    rootStyles.getPropertyValue("--color-primary").trim() ||
+    "#7217c7";
 
   return color.startsWith("#") ? color.slice(1) : color;
 };
 
-export const TECH_LOGO_COLOR = getTechLogoColor() || "000000";
+export const TECH_LOGO_COLOR = getTechLogoColor() || "#7217c7";
 
 function badgeUrl(label, logo, color = TECH_LOGO_COLOR) {
   return `https://img.shields.io/badge/${encodeURIComponent(label)}-${color}?style=for-the-badge&logo=${encodeURIComponent(logo)}&logoColor=white`;

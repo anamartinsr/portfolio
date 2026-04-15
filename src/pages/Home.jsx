@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <div className="bg-(--scrol-bg)">
+      <div className="bg-[color:var(--color-primary)]">
         <LogoLoop
           logos={techLogos}
           speed={85}
