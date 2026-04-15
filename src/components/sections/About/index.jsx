@@ -2,7 +2,7 @@ import { University } from "lucide-react";
 import CardAbout from "./CardAbout";
 import GlassCard from "./GlassCard";
 import ExperienceSkillsGrid from "./ExperienceSkillsGrid";
-import Title from "../../Title";
+import Title from "../../ui/Title";
 import { getLanguageContent } from "../../../data/content";
 import { useLanguage } from "../../../context/LanguageContext";
 import CircularText from "./Effects/CircularText";

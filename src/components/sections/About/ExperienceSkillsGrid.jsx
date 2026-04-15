@@ -9,7 +9,7 @@ export default function ExperienceSkillsGrid({ categories, language = "pt" }) {
               : category.title[language]
           }
         >
-          <h4 className="text-xs uppercase tracking-widest text-(--purple-0) font-bold mb-3 opacity-90">
+          <h4 className="text-xs uppercase tracking-widest text-[color:var(--color-purple-0)] font-bold mb-3 opacity-90">
             {typeof category.title === "string"
               ? category.title
               : category.title[language]}
@@ -18,7 +18,7 @@ export default function ExperienceSkillsGrid({ categories, language = "pt" }) {
             {category.items.map((item) => (
               <span
                 key={`${typeof category.title === "string" ? category.title : category.title[language]}-${item}`}
-                className="px-3 py-1 text-sm rounded-md bg-[color:var(--card-soft)] text-(--white)"
+                className="px-3 py-1 text-sm rounded-md bg-[color:var(--color-card-soft)] text-[color:var(--color-text-primary)]"
               >
                 {item}
               </span>
