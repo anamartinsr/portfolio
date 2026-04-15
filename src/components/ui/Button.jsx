@@ -9,7 +9,7 @@ export default function Button({
       href={href}
       target={target}
       rel="noopener noreferrer"
-      className="flex items-center gap-5 px-6 hover:scale-105 rounded-md bg-(--primary-color) py-3 font-semibold text-white hover:brightness-110 transition cursor-pointer"
+      className="flex items-center gap-5 px-6 hover:scale-105 rounded-md bg-[color:var(--color-primary)] py-3 font-semibold text-white hover:brightness-110 transition cursor-pointer"
     >
       {Icon && <Icon />}
       {children}

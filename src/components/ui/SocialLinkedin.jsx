@@ -13,7 +13,7 @@ export default function SocialLinkedin({
       rel="noopener noreferrer"
       className={
         className ??
-        "text-[color:var(--header-text)] hover:text-[color:var(--header-text-hover)] transition"
+        "text-[color:var(--color-header-text)] hover:text-[color:var(--color-header-text-hover)] transition"
       }
     >
       <Linkedin size={size} strokeWidth={1.5} />

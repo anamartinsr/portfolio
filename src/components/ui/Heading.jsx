@@ -7,7 +7,9 @@ export default function Heading({ children, size = "md" }) {
   };
 
   return (
-    <h3 className={`text-[color:var(--text-primary)] ${sizeStyles[size]}`}>
+    <h3
+      className={`text-[color:var(--color-text-primary)] ${sizeStyles[size]}`}
+    >
       {children}
     </h3>
   );

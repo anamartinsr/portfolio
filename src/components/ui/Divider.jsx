@@ -11,9 +11,6 @@ export default function Divider({ inverted = false }) {
       >
         <path d="M0,76 C160,10 420,8 720,48 C1010,90 1240,112 1440,34 L1440,120 L0,120 Z" />
       </svg>
-      <span className="shape circle" />
-      <span className="shape square" />
-      <span className="shape triangle" />
     </div>
   );
 }
