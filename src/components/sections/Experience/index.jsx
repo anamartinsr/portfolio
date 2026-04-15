@@ -1,12 +1,14 @@
 import { Linkedin } from "lucide-react";
 
-import Title from "../../Title";
+import Title from "../../ui/Title";
 import Button from "../../ui/Button";
 import BackgroundGlow from "../../illustration/BackgroundGlow";
 import { getLanguageContent, sharedSocialLinks } from "../../../data/content";
 import { useLanguage } from "../../../context/LanguageContext";
 import ExperienceTimelineItem from "./TimelineItem";
 import ExperienceTechnologies from "./Technologies";
+import BackgroundBlurs from "../../illustration/BackgroundBlurs";
+import { backgroundBlurs } from "../../../data/contentCreator";
 
 export default function Experience() {
   const { language } = useLanguage();
@@ -20,6 +22,7 @@ export default function Experience() {
   return (
     <section id="experience" className="py-11 relative overflow-hidden">
       <BackgroundGlow />
+      <BackgroundBlurs blurs={backgroundBlurs} />
 
       <div className="max-w-7xl mx-auto">
         <Title
@@ -29,7 +32,7 @@ export default function Experience() {
         />
 
         <div className="max-w-6xl mx-auto relative">
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[2px] bg-[color:var(--surface-glass-border)] -translate-x-1/2" />
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[2px] bg-[color:var(--color-surface-glass-border)] -translate-x-1/2" />
 
           {experiencesList.map((exp, index) => {
             return (

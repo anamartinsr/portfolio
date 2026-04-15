@@ -35,8 +35,10 @@ export default function Card() {
               ${info.href ? "cursor-pointer" : ""}
             `}
           >
-            <div className="mb-4 p-2 rounded-xl bg-[linear-gradient(135deg,hsla(280,80%,65%,0.1)_0%,hsla(320,85%,65%,0.1)_100%)]">
-              <div className="text-(--purple-0)">{info.icon}</div>
+            <div className="mb-4 p-2 rounded-xl gradient-badge-icon">
+              <div className="text-[color:var(--color-purple-0)]">
+                {info.icon}
+              </div>
             </div>
 
             <div>

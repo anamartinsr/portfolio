@@ -1,5 +1,5 @@
 import { Linkedin } from "lucide-react";
-import Title from "../../Title";
+import Title from "../../ui/Title";
 import Button from "../../ui/Button";
 import Card from "./Card";
 import { getLanguageContent, sharedSocialLinks } from "../../../data/content";
@@ -10,7 +10,7 @@ export default function Contact() {
   const { contact } = getLanguageContent(language);
 
   return (
-    <section id="contact" className="py-24 bg-(--black)">
+    <section id="contact" className="py-24 bg-[color:var(--color-black)]">
       <div className="container mx-auto px-6">
         <Title eyebrow={contact.eyebrow} text={contact.text} />
 
