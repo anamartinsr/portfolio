@@ -1,6 +1,7 @@
-import Tecnologym from "../assets/tecnologym.png";
+import Tecnologym from "../assets/test.png";
 import UrlShortener from "../assets/url_shortener.png";
 import DocuSend from "../assets/docusend.png";
+import PortfolioComercial from "../assets/portfolio_comercial.png";
 import { Linkedin, Mail, MapPin } from "lucide-react";
 
 export const sharedSocialLinks = {
@@ -212,6 +213,17 @@ const sharedProjects = [
       "Zod",
       "API integration",
     ],
+    codeLink: "https://github.com/anamartinsr/docusign-integration",
+    projectLink: null,
+  },
+  {
+    title: { pt: "Portfólio Comercial", en: "Commercial Portfolio" },
+    description: {
+      pt: "Portfólio comercial para apresentação de serviços e projetos, com foco em design moderno e experiência do usuário.",
+      en: "A commercial portfolio for showcasing services and projects, with a focus on modern design and user experience.",
+    },
+    img: PortfolioComercial,
+    techs: ["TypeScript", "React", "Vite", "TailwindCSS", "Vercel", "Zod"],
     codeLink: "https://github.com/anamartinsr/docusign-integration",
     projectLink: null,
   },

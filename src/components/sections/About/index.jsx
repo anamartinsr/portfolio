@@ -28,7 +28,6 @@ export default function About() {
             <GlassCard title={about.experienceTitle}>
               <div className="space-y-8">
                 <p>{about.experienceText}</p>
-
                 <ExperienceSkillsGrid
                   categories={about.categories}
                   language={language}
