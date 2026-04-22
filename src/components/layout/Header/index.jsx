@@ -23,16 +23,7 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
-    if (savedTheme === "light" || savedTheme === "dark") {
-      setTheme(savedTheme);
-      return;
-    }
-
-    const preferredLight = window.matchMedia(
-      "(prefers-color-scheme: light)",
-    ).matches;
-    setTheme(preferredLight ? "light" : "dark");
+    setTheme("dark");
   }, []);
 
   useEffect(() => {
