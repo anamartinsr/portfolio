@@ -4,7 +4,7 @@ import GlassCard from "./GlassCard";
 import ExperienceSkillsGrid from "./ExperienceSkillsGrid";
 import Title from "../../ui/Title";
 import { getLanguageContent } from "../../../data/content";
-import { useLanguage } from "../../../context/LanguageContext";
+import { useLanguage } from "../../../context/useLanguage";
 import CircularText from "./Effects/CircularText";
 
 export default function About() {

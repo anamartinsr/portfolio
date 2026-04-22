@@ -1,7 +1,7 @@
 import { MapPin, Mail, ArrowUp } from "lucide-react";
 import ScrollToSection from "../../utils/scroll";
 import { getLanguageContent } from "../../data/content";
-import { useLanguage } from "../../context/LanguageContext";
+import { useLanguage } from "../../context/useLanguage";
 import SocialGitHub from "../ui/SocialGithub";
 import SocialLinkedin from "../ui/SocialLinkedin";
 

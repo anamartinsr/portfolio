@@ -4,7 +4,7 @@ import NavFooter from "./NavFooter";
 import GradientCard from "./GradientCard";
 import Heading from "../../ui/Heading";
 import { getLanguageContent } from "../../../data/content";
-import { useLanguage } from "../../../context/LanguageContext";
+import { useLanguage } from "../../../context/useLanguage";
 
 export default function CreatorPhoneMockup() {
   const { language } = useLanguage();

@@ -2,7 +2,7 @@ import { ArrowLeft, AlertTriangle } from "lucide-react";
 import Button from "../components/ui/Button";
 import floatingLinesBackground from "../assets/background_404.png";
 import { getLanguageContent } from "../data/content";
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../context/useLanguage";
 
 export default function NotFound() {
   const { language } = useLanguage();
