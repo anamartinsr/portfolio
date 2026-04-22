@@ -11,7 +11,7 @@ export default function Footer() {
   const footerColumns = footer.columns;
 
   return (
-    <footer className="bg-[color:var(--color-footer-bg)] text-[color:var(--color-footer-text)] py-12 border-t border-[color:var(--color-footer-border)] relative">
+    <footer className="bg-[color:var(--color-footer-bg)] text-[color:var(--color-footer-text)] py-12 px-5 border-t border-[color:var(--color-footer-border)] relative">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-4">
         <div className="md:col-span-2 flex flex-col items-start gap-4">
           <div className="flex gap-4">
