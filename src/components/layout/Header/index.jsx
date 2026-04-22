@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { Menu, Moon, Sun, X } from "lucide-react";
-import SocialLinkedin from "../ui/SocialLinkedin";
-import SocialGitHub from "../ui/SocialGithub";
-import { getLanguageContent } from "../../data/content";
-import { useLanguage } from "../../context/useLanguage";
+import { Menu, X } from "lucide-react";
+import SocialLinkedin from "../../ui/SocialLinkedin";
+import SocialGitHub from "../../ui/SocialGithub";
+import HeaderSwitches from "./HeaderSwitches";
+import { getLanguageContent } from "../../../data/content";
+import { useLanguage } from "../../../context/useLanguage";
 
 const THEME_STORAGE_KEY = "portfolio-theme";
 
@@ -110,66 +111,13 @@ export default function Header() {
         </ul>
 
         <div className="flex items-center gap-4">
-          <span
-            className={`text-[11px] font-semibold transition-colors ${
-              language === "pt" ? "text-gray-100" : "text-gray-400"
-            }`}
-          >
-            PT
-          </span>
-
-          <button
-            onClick={toggleLanguage}
-            className="relative w-14 h-7 rounded-full overflow-hidden cursor-pointer transition-all duration-300
-               shadow-inner bg-gray-200"
-            aria-label={header.switchLanguageAriaLabel}
-          >
-            <div
-              className={`absolute inset-0 bg-cover bg-center transition-all duration-300
-                  opacity-90`}
-              style={{
-                backgroundImage:
-                  language === "pt"
-                    ? "url('https://flagcdn.com/w320/br.png')"
-                    : "url('https://flagcdn.com/w320/gb.png')",
-              }}
-            />
-
-            <div
-              className="absolute inset-0 rounded-full 
-  shadow-[inset_0_9px_6px_rgba(0,0,0,0.35),inset_0_-2px_3px_rgba(255,255,255,0.4)]"
-            />
-
-            <div
-              className={`absolute top-0.5 left-0.5 w-6 h-6 bg-white rounded-full transition-all duration-300
-                  shadow-[0_10px_10px_rgba(0,0,0,0.35)]
-                  ${language === "pt" ? "translate-x-0" : "translate-x-7"}`}
-            />
-          </button>
-
-          <span
-            className={`text-[11px] font-semibold transition-colors ${
-              language === "en" ? "text-gray-100" : "text-gray-400"
-            }`}
-          >
-            EN
-          </span>
-          <button
-            onClick={toggleTheme}
-            className="text-[color:var(--color-header-text)] border border-[color:var(--color-header-text)]/30 rounded-full p-2 cursor-pointer transition-all duration-200 hover:border-[color:var(--color-header-text-hover)] hover:text-[color:var(--color-header-text-hover)] hover:scale-105 active:scale-95"
-            aria-label={
-              theme === "dark"
-                ? header.toggleThemeAriaLabel
-                : header.toggleThemeAltAriaLabel
-            }
-            title={
-              theme === "dark"
-                ? header.toggleThemeTitle
-                : header.toggleThemeAltTitle
-            }
-          >
-            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
+          <HeaderSwitches
+            language={language}
+            toggleLanguage={toggleLanguage}
+            header={header}
+            theme={theme}
+            toggleTheme={toggleTheme}
+          />
 
           <button
             onClick={() => setOpen(!open)}
