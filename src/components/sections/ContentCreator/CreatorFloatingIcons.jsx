@@ -77,12 +77,31 @@ export default function CreatorFloatingIcons() {
   const { language } = useLanguage();
   const { contentCreator } = getLanguageContent(language);
 
+  const getResponsivePositionClass = (id, desktopPositionClass) => {
+    if (id === "tiktok") {
+      return "absolute right-2 top-2 z-20 sm:-right-20 sm:-top-8";
+    }
+
+    if (id === "github") {
+      return "absolute left-2 bottom-8 z-20 sm:-left-6 sm:bottom-16";
+    }
+
+    if (id === "instagram") {
+      return "absolute right-10 top-24 z-20 sm:-right-2 sm:top-16";
+    }
+
+    return desktopPositionClass;
+  };
+
   return (
     <>
       {contentCreator.floatingIcons.map((item) => (
         <IconBubble
           key={item.id}
-          positionClass={item.positionClass}
+          positionClass={getResponsivePositionClass(
+            item.id,
+            item.positionClass,
+          )}
           outerSizeClass={item.outerSizeClass}
           innerSizeClass={item.innerSizeClass}
           innerStyle={item.innerStyle}

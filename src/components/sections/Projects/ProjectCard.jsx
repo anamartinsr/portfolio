@@ -22,7 +22,7 @@ export default function ProjectCard({ project, reverse, language, copy }) {
         </h3>
 
         <div
-          className={`bg-[color:var(--color-card-soft)] backdrop-blur-md rounded-lg p-6 shadow-lg text-center space-y-4 z-10 ${reverse ? "-mr-5" : "-ml-5"}`}
+          className={`bg-[color:var(--color-card-soft)] backdrop-blur-md rounded-lg p-6 shadow-lg text-center space-y-4 z-10 ${reverse ? "-mr-1" : "-ml-1"}`}
         >
           <p className="leading-relaxed">{project.description[language]}</p>
 

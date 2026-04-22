@@ -31,7 +31,7 @@ export default function Experience() {
           highlight={experience.highlight}
         />
 
-        <div className="max-w-6xl mx-auto relative">
+        <div className="max-w-6xl mx-auto p-4 relative">
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[2px] bg-[color:var(--color-surface-glass-border)] -translate-x-1/2" />
 
           {experiencesList.map((exp, index) => {
