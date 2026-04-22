@@ -4,7 +4,7 @@ import Title from "../../ui/Title";
 import Button from "../../ui/Button";
 import BackgroundGlow from "../../illustration/BackgroundGlow";
 import { getLanguageContent, sharedSocialLinks } from "../../../data/content";
-import { useLanguage } from "../../../context/LanguageContext";
+import { useLanguage } from "../../../context/useLanguage";
 import ExperienceTimelineItem from "./TimelineItem";
 import ExperienceTechnologies from "./Technologies";
 import BackgroundBlurs from "../../illustration/BackgroundBlurs";

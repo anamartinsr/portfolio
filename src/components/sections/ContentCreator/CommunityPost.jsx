@@ -1,7 +1,7 @@
 import PostHeader from "./PostHeader";
 import PostActions from "./PostActions";
 import { getLanguageContent } from "../../../data/content";
-import { useLanguage } from "../../../context/LanguageContext";
+import { useLanguage } from "../../../context/useLanguage";
 
 export default function CommunityPost() {
   const { language } = useLanguage();

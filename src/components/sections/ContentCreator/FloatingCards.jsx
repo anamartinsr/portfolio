@@ -2,7 +2,7 @@ import { ChevronLeft, MoreHorizontal } from "lucide-react";
 import profileImg from "../../../assets/profileBackground.jpeg";
 import { sharedSocialLinks } from "../../../data/content.jsx";
 
-function MessageCard({ author, content, position }) {
+function MessageCard({ content, position }) {
   return (
     <div
       className={`absolute ${position} max-w-[260px] rounded-xl bg-[color:var(--color-secondary)] p-4 shadow-[0px_12px_28px_rgba(0,0,0,0.22)]`}

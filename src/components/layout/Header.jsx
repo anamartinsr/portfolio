@@ -3,7 +3,7 @@ import { Menu, Moon, Sun, X } from "lucide-react";
 import SocialLinkedin from "../ui/SocialLinkedin";
 import SocialGitHub from "../ui/SocialGithub";
 import { getLanguageContent } from "../../data/content";
-import { useLanguage } from "../../context/LanguageContext";
+import { useLanguage } from "../../context/useLanguage";
 
 const THEME_STORAGE_KEY = "portfolio-theme";
 

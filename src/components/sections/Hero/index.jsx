@@ -8,7 +8,7 @@ import IntroBadge from "./IntroBadge";
 import ScrollDownButton from "./ScrollDownButton";
 import Button from "../../ui/Button";
 import { getLanguageContent } from "../../../data/content";
-import { useLanguage } from "../../../context/LanguageContext";
+import { useLanguage } from "../../../context/useLanguage";
 
 export default function Hero() {
   const { language } = useLanguage();

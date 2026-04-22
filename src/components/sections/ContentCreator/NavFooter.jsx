@@ -1,5 +1,5 @@
 import { getLanguageContent } from "../../../data/content";
-import { useLanguage } from "../../../context/LanguageContext";
+import { useLanguage } from "../../../context/useLanguage";
 
 export default function NavFooter() {
   const { language } = useLanguage();

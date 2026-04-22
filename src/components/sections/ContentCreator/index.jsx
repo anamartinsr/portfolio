@@ -3,7 +3,7 @@ import CreatorFloatingIcons from "./CreatorFloatingIcons";
 import FloatingCards from "./FloatingCards";
 import Title from "../../ui/Title";
 import { getLanguageContent } from "../../../data/content";
-import { useLanguage } from "../../../context/LanguageContext";
+import { useLanguage } from "../../../context/useLanguage";
 
 export default function ContentCreator() {
   const { language } = useLanguage();

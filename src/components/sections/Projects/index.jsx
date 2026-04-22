@@ -2,7 +2,7 @@ import { SiGithub } from "react-icons/si";
 import Title from "../../ui/Title";
 import Button from "../../ui/Button";
 import { getLanguageContent, sharedSocialLinks } from "../../../data/content";
-import { useLanguage } from "../../../context/LanguageContext";
+import { useLanguage } from "../../../context/useLanguage";
 import Divider from "../../ui/Divider";
 import ProjectCard from "./ProjectCard";
 import BackgroundBlurs from "../../illustration/BackgroundBlurs";

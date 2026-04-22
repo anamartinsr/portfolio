@@ -3,7 +3,7 @@ import Title from "../../ui/Title";
 import Button from "../../ui/Button";
 import Card from "./Card";
 import { getLanguageContent, sharedSocialLinks } from "../../../data/content";
-import { useLanguage } from "../../../context/LanguageContext";
+import { useLanguage } from "../../../context/useLanguage";
 
 export default function Contact() {
   const { language } = useLanguage();
