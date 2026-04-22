@@ -1,5 +1,6 @@
 import { FaInstagram, FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { sharedSocialLinks } from "../../../data/content";
 import SocialLink from "../../ui/SocialLink";
 
 export default function CardAbout({ icon, title, text, showSocial = false }) {
@@ -17,8 +18,8 @@ export default function CardAbout({ icon, title, text, showSocial = false }) {
       />
 
       <div className="relative z-10 flex flex-col items-center">
-        <div className="mb-4 p-2 rounded-xl bg-[linear-gradient(135deg,hsla(280,80%,65%,0.1)_0%,hsla(320,85%,65%,0.1)_100%)]">
-          <div className="text-(--purple-0)">{icon}</div>
+        <div className="mb-4 p-2 rounded-xl gradient-badge-icon">
+          <div className="text-[color:var(--color-purple-0)]">{icon}</div>
         </div>
 
         <h3 className="text-xl font-bold text-foreground mb-3">{title}</h3>
@@ -27,15 +28,9 @@ export default function CardAbout({ icon, title, text, showSocial = false }) {
 
       {showSocial && (
         <div className="mt-auto pt-6 flex justify-center gap-4">
-          <SocialLink
-            href="https://www.tiktok.com/@anamartins.dev"
-            Icon={FaTiktok}
-          />
-          <SocialLink
-            href="https://www.instagram.com/anamartins.dev"
-            Icon={FaInstagram}
-          />
-          <SocialLink href="https://x.com/anamartinsdev" Icon={FaXTwitter} />
+          <SocialLink href={sharedSocialLinks.tiktok} Icon={FaTiktok} />
+          <SocialLink href={sharedSocialLinks.instagram} Icon={FaInstagram} />
+          <SocialLink href={sharedSocialLinks.x} Icon={FaXTwitter} />
         </div>
       )}
     </div>

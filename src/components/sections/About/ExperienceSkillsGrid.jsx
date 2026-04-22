@@ -1,0 +1,31 @@
+export default function ExperienceSkillsGrid({ categories, language = "pt" }) {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+      {categories.map((category) => (
+        <div
+          key={
+            typeof category.title === "string"
+              ? category.title
+              : category.title[language]
+          }
+        >
+          <h4 className="text-xs uppercase tracking-widest text-[color:var(--color-purple-0)] font-bold mb-3 opacity-90">
+            {typeof category.title === "string"
+              ? category.title
+              : category.title[language]}
+          </h4>
+          <div className="flex flex-col gap-2">
+            {category.items.map((item) => (
+              <span
+                key={`${typeof category.title === "string" ? category.title : category.title[language]}-${item}`}
+                className="px-3 py-1 text-sm rounded-md bg-[color:var(--color-card-soft)] text-[color:var(--color-text-primary)]"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}

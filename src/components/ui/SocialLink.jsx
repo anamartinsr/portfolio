@@ -4,7 +4,7 @@ export default function SocialLink({ href, Icon }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`text-(--white) hover:text-(--primary-color) transition`}
+      className={`text-[color:var(--color-text-primary)] hover:text-[color:var(--color-primary)] transition`}
     >
       <Icon strokeWidth={1.5} />
     </a>

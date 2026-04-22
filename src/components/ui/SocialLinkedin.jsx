@@ -1,12 +1,20 @@
 import { Linkedin } from "lucide-react";
+import { sharedSocialLinks } from "../../data/content";
 
-export default function SocialLinkedin({ size }) {
+export default function SocialLinkedin({
+  size,
+  href = sharedSocialLinks.linkedin,
+  className,
+}) {
   return (
     <a
-      href="https://www.linkedin.com/in/anamartinsr"
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`text-(--white) hover:text-(--blue) transition`}
+      className={
+        className ??
+        "text-[color:var(--color-header-text)] hover:text-[color:var(--color-header-text-hover)] transition"
+      }
     >
       <Linkedin size={size} strokeWidth={1.5} />
     </a>

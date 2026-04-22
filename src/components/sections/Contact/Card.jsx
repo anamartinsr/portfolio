@@ -1,33 +1,18 @@
-import { Mail, MessageCircle, MapPin } from "lucide-react";
+import { getLanguageContent } from "../../../data/content";
+import { useLanguage } from "../../../context/LanguageContext";
 
 export default function Card() {
+  const { language } = useLanguage();
+  const { contact } = getLanguageContent(language);
   const contactInfo = [
-    {
-      icon: <Mail />,
-      title: "Email",
-      value: "martinnrs.ana@gmail.com",
-      href: "mailto:martinnrs.ana@gmail.com",
-      highlight: true,
-    },
-    {
-      icon: <MessageCircle />,
-      title: "LinkedIn",
-      value: "linkedin.com/in/anamartinsr/",
-      href: "https://linkedin.com/in/anamartinsr/",
-    },
-    {
-      icon: <MapPin />,
-      title: "Localização",
-      value: "Belo Horizonte - MG, Brasil",
-      description: "",
-      href: null,
-    },
+    contact.contactInfo.email,
+    contact.contactInfo.linkedin,
+    contact.contactInfo.location,
   ];
 
   return (
     <div
       className="group relative rounded-2xl p-8 glass-card overflow-hidden
-      hover:scale-105 transition-transform duration-500 ease-out
       hover:shadow-glow animate-slide-up min-h-[240px]
       flex flex-col items-center text-center"
     >
@@ -37,32 +22,40 @@ export default function Card() {
         scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
       />
 
-      <div className="relative z-10 flex flex-col items-center">
-        <div className="relative z-10 w-full grid md:grid-cols-2 gap-6">
-          {contactInfo.map((info, index) => (
-            <div
-              key={index}
-              onClick={() => info.href && window.open(info.href, "_blank")}
-              className={`
+      <div className="flex flex-col w-full gap-6">
+        {contactInfo.map((info, index) => (
+          <div
+            key={index}
+            onClick={() => info.href && window.open(info.href, "_blank")}
+            className={`
               rounded-2xl 
-              p-6 glass-card 
+              p-3 glass-card 
               flex gap-4 items-start text-left
               ${info.highlight ? "md:col-span-2 border-primary/40" : ""}
               ${info.href ? "cursor-pointer" : ""}
             `}
-            >
-              <div className="mb-4 p-2 rounded-xl bg-[linear-gradient(135deg,hsla(280,80%,65%,0.1)_0%,hsla(320,85%,65%,0.1)_100%)]">
-                <div className="text-(--purple-0)">{info.icon}</div>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-lg">{info.title}</h4>
-
-                <p className="text-sm text-muted-foreground">{info.value}</p>
+          >
+            <div className="mb-4 p-2 rounded-xl gradient-badge-icon">
+              <div className="text-[color:var(--color-purple-0)]">
+                {info.icon}
               </div>
             </div>
-          ))}
-        </div>
+
+            <div>
+              <h4 className="font-semibold text-lg">
+                {typeof info.title === "string"
+                  ? info.title
+                  : info.title[language]}
+              </h4>
+
+              <p className="text-sm text-muted-foreground">
+                {typeof info.value === "string"
+                  ? info.value
+                  : info.value[language]}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
