@@ -1,12 +1,12 @@
-import Tecnologym from "../assets/test.png";
+import Tecnologym from "../assets/tecnologym.png";
 import UrlShortener from "../assets/url_shortener.png";
 import DocuSend from "../assets/docusend.png";
+import DocusendIntegration from "../assets/docusend_integration.png";
 import PortfolioComercial from "../assets/portfolio_comercial.png";
 import { Linkedin, Mail, MapPin } from "lucide-react";
 
 export const sharedSocialLinks = {
   tiktok: "https://www.tiktok.com/@anamartins.dev",
-  youtube: "https://www.youtube.com/@anamartinsdev",
   github: "https://github.com/anamartinsr",
   linkedin: "https://linkedin.com/in/anamartinsr/",
   instagram: "https://www.instagram.com/anamartins.dev",
@@ -153,26 +153,34 @@ const sharedProjects = [
     projectLink: null,
   },
   {
-    title: { pt: "Technology Gym", en: "Technology Gym" },
+    title: { pt: "Portfólio Comercial", en: "Commercial Portfolio" },
     description: {
-      pt: "Site de academia com apresentação de planos, atividades e matrícula online, com estrutura moderna e foco em experiência do usuário, performance e arquitetura escalável.",
-      en: "A gym website with plan presentation, activities, and online sign-up, built with a modern structure and a focus on user experience, performance, and scalable architecture.",
+      pt: "Portfólio comercial para apresentação de serviços e projetos, com foco em design moderno e experiência do usuário.",
+      en: "A commercial portfolio for showcasing services and projects, with a focus on modern design and user experience.",
     },
-    img: Tecnologym,
+    img: PortfolioComercial,
+    techs: ["TypeScript", "React", "Vite", "TailwindCSS", "Vercel", "Zod"],
+    codeLink: "https://github.com/anamartinsr/commercial_portfolio",
+    projectLink: "https://ellapartnerships.vercel.app",
+  },
+  {
+    title: { pt: "DocuSign Integration", en: "DocuSign Integration" },
+    description: {
+      pt: "Integração com a plataforma DocuSign para assinatura eletrônica de documentos, permitindo que os usuários enviem e assinem contratos digitalmente, com foco em segurança e conformidade.",
+      en: "Integration with the DocuSign platform for electronic document signing, allowing users to send and sign contracts digitally with a focus on security and compliance.",
+    },
+    img: DocusendIntegration,
     techs: [
+      "Node.js",
       "TypeScript",
-      "React",
-      "Vite",
-      "TailwindCSS",
-      "Husky",
-      "Github Actions CI/CD",
-      "Vercel",
-      "Vitest",
-      "Testing Library",
+      "Express",
+      "Jest",
+      "helmet",
       "Zod",
+      "API integration",
     ],
-    codeLink: "https://github.com/anamartinsr/technology_gym",
-    projectLink: "https://technologym.vercel.app/",
+    codeLink: "https://github.com/anamartinsr/docusign-integration",
+    projectLink: null,
   },
   {
     title: { pt: "DocuSend", en: "DocuSend" },
@@ -195,37 +203,30 @@ const sharedProjects = [
       "API integration",
     ],
     codeLink: "https://github.com/anamartinsr/docuSend",
-    projectLink: null,
+    projectLink: "https://docusends.vercel.app",
   },
+
   {
-    title: { pt: "DocuSign Integration", en: "DocuSign Integration" },
+    title: { pt: "Technology Gym", en: "Technology Gym" },
     description: {
-      pt: "Integração com a plataforma DocuSign para assinatura eletrônica de documentos, permitindo que os usuários enviem e assinem contratos digitalmente, com foco em segurança e conformidade.",
-      en: "Integration with the DocuSign platform for electronic document signing, allowing users to send and sign contracts digitally with a focus on security and compliance.",
+      pt: "Site de academia com apresentação de planos, atividades e matrícula online, com estrutura moderna e foco em experiência do usuário, performance e arquitetura escalável.",
+      en: "A gym website with plan presentation, activities, and online sign-up, built with a modern structure and a focus on user experience, performance, and scalable architecture.",
     },
-    img: DocuSend,
+    img: Tecnologym,
     techs: [
-      "Node.js",
       "TypeScript",
-      "Express",
-      "Jest",
-      "helmet",
+      "React",
+      "Vite",
+      "TailwindCSS",
+      "Husky",
+      "Github Actions CI/CD",
+      "Vercel",
+      "Vitest",
+      "Testing Library",
       "Zod",
-      "API integration",
     ],
-    codeLink: "https://github.com/anamartinsr/docusign-integration",
-    projectLink: null,
-  },
-  {
-    title: { pt: "Portfólio Comercial", en: "Commercial Portfolio" },
-    description: {
-      pt: "Portfólio comercial para apresentação de serviços e projetos, com foco em design moderno e experiência do usuário.",
-      en: "A commercial portfolio for showcasing services and projects, with a focus on modern design and user experience.",
-    },
-    img: PortfolioComercial,
-    techs: ["TypeScript", "React", "Vite", "TailwindCSS", "Vercel", "Zod"],
-    codeLink: "https://github.com/anamartinsr/docusign-integration",
-    projectLink: null,
+    codeLink: "https://github.com/anamartinsr/technology_gym",
+    projectLink: "https://technologym.vercel.app/",
   },
 ];
 
@@ -260,8 +261,8 @@ const sharedContentCreator = {
   heading: { pt: "Conteúdo com foco em", en: "Content focused on" },
   highlight: { pt: "tecnologia e carreira", en: "technology and career" },
   description: {
-    pt: "Compartilho tutoriais, boas práticas e bastidores reais do dia a dia como desenvolvedora para ajudar pessoas que estão evoluindo na área de tecnologia.",
-    en: "I share tutorials, best practices, and real behind-the-scenes moments from my day-to-day as a developer to help people growing in tech.",
+    pt: "Compartilho tutoriais e boas práticas para ajudar pessoas que estão evoluindo na área de tecnologia.",
+    en: "I share tutorials and best practices to help people growing in tech.",
   },
   communityMockup: {
     title: { pt: "Comunidade", en: "Community" },
@@ -446,17 +447,6 @@ export const contentByLanguage = {
           iconClassName: "h-10 w-10 text-white border rounded-full p-1",
         },
         {
-          id: "youtube",
-          positionClass: "absolute -right-12 bottom-2 z-20",
-          outerSizeClass: "h-14 w-14 md:h-16 md:w-16",
-          innerSizeClass: "h-9 w-9 md:h-10 md:w-10",
-          innerStyle: { backgroundColor: "var(--color-social-youtube-bg)" },
-          href: sharedSocialLinks.youtube,
-          label: "Abrir YouTube",
-          icon: "youtube",
-          iconClassName: "h-6 w-6 text-white",
-        },
-        {
           id: "github",
           positionClass: "absolute -left-6 bottom-16 z-20",
           outerSizeClass: "h-14 w-14 md:h-16 md:w-16",
@@ -637,17 +627,6 @@ export const contentByLanguage = {
           label: "Open TikTok",
           icon: "tiktok",
           iconClassName: "h-10 w-10 text-white border rounded-full p-1",
-        },
-        {
-          id: "youtube",
-          positionClass: "absolute -right-12 bottom-2 z-20",
-          outerSizeClass: "h-14 w-14 md:h-16 md:w-16",
-          innerSizeClass: "h-9 w-9 md:h-10 md:w-10",
-          innerStyle: { backgroundColor: "var(--color-social-youtube-bg)" },
-          href: sharedSocialLinks.youtube,
-          label: "Open YouTube",
-          icon: "youtube",
-          iconClassName: "h-6 w-6 text-white",
         },
         {
           id: "github",

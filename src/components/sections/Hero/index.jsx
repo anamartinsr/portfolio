@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { FaCode } from "react-icons/fa";
 
 import TrueFocus from "./effects/TrueFocus";
-import BackgroundDark from "../../../assets/background.png";
-import BackgroundLight from "../../../assets/grainient-1774962431663.png";
+import BackgroundDark from "../../../assets/background_dark.png";
+import BackgroundLight from "../../../assets/background_light.png";
 import IntroBadge from "./IntroBadge";
 import ScrollDownButton from "./ScrollDownButton";
 import Button from "../../ui/Button";

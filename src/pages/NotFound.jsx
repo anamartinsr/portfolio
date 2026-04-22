@@ -1,6 +1,6 @@
 import { ArrowLeft, AlertTriangle } from "lucide-react";
 import Button from "../components/ui/Button";
-import floatingLinesBackground from "../assets/light-pillar-1775069855742.png";
+import floatingLinesBackground from "../assets/background_404.png";
 import { getLanguageContent } from "../data/content";
 import { useLanguage } from "../context/LanguageContext";
 

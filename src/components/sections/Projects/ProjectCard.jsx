@@ -12,7 +12,7 @@ export default function ProjectCard({ project, reverse, language, copy }) {
           alt={project.title[language]}
           loading="lazy"
           decoding="async"
-          className="rounded-lg shadow-2xl w-full object-cover"
+          className="rounded-lg w-full object-cover"
         />
       </div>
 
