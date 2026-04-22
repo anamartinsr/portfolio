@@ -112,7 +112,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <span
             className={`text-[11px] font-semibold transition-colors ${
-              language === "pt" ? "text-gray-100" : "text-gray-400"
+              language === "pt" ? "text-gray-100 font-bold" : "text-gray-200"
             }`}
           >
             PT
@@ -148,8 +148,10 @@ export default function Header() {
           </button>
 
           <span
-            className={`text-[11px] font-semibold transition-colors ${
-              language === "en" ? "text-gray-100" : "text-gray-400"
+            className={`text-[11px] transition-colors ${
+              language === "en"
+                ? "text-gray-100 font-extrabold"
+                : "text-gray-200"
             }`}
           >
             EN
