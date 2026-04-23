@@ -31,6 +31,7 @@ export default function About() {
                 <ExperienceSkillsGrid
                   categories={about.categories}
                   language={language}
+                  toggleLabels={about.skillsToggle}
                 />
               </div>
             </GlassCard>

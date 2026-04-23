@@ -20,6 +20,17 @@ const sharedTechCategories = [
     items: ["JavaScript", "TypeScript", "Node.js", "Nest.js", "REST APIs"],
   },
   {
+    title: { pt: "Frontend", en: "Frontend" },
+    items: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Styled Components",
+      "HTML",
+      "CSS",
+    ],
+  },
+  {
     title: { pt: "Banco de dados", en: "Databases" },
     items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
   },
@@ -34,17 +45,6 @@ const sharedTechCategories = [
   {
     title: { pt: "DevOps", en: "DevOps" },
     items: ["Docker", "GitHub Actions (CI/CD)", "Nginx", "Linux", "AWS"],
-  },
-  {
-    title: { pt: "Frontend", en: "Frontend" },
-    items: [
-      "React",
-      "Next.js",
-      "Tailwind CSS",
-      "Styled Components",
-      "HTML",
-      "CSS",
-    ],
   },
   {
     title: {
@@ -390,6 +390,10 @@ export const contentByLanguage = {
       cardText:
         "Represento os alunos de Sistemas de Informação no colegiado da instituição, contribuindo ativamente em decisões acadêmicas e promovendo melhorias na comunicação, organização e qualidade do curso.",
       categories: sharedTechCategories,
+      skillsToggle: {
+        more: "Ver mais",
+        less: "Ver menos",
+      },
     },
     experience: {
       eyebrow: "Trajetória",
@@ -548,6 +552,10 @@ export const contentByLanguage = {
       cardText:
         "I represent Systems Information students on the institution's board, actively contributing to academic decisions and promoting improvements in communication, organization, and course quality.",
       categories: sharedTechCategories,
+      skillsToggle: {
+        more: "See more",
+        less: "See less",
+      },
     },
     experience: {
       eyebrow: "Journey",
