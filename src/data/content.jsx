@@ -185,8 +185,8 @@ const sharedProjects = [
   {
     title: { pt: "DocuSend", en: "DocuSend" },
     description: {
-      pt: "DocuSend é uma aplicação de envio de documentos, permitindo que os usuários enviem arquivos de forma rápida e segura, com integração de API, validação de dados e testes automatizados, utilizando tecnologias modernas para garantir uma experiência eficiente e confiável.",
-      en: "DocuSend is a document delivery app that lets users send files quickly and securely, with API integration, data validation, and automated tests, using modern technologies to ensure an efficient and reliable experience.",
+      pt: "DocuSend é uma aplicação de assinatura de documentos, permitindo que os usuários assinem documentos de forma rápida e segura, com integração de API, validação de dados e testes automatizados",
+      en: "DocuSend is a document signing application that allows users to sign documents quickly and securely, with API integration, data validation, and automated testing.",
     },
     img: DocuSend,
     techs: [
