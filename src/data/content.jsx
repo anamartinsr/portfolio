@@ -14,6 +14,13 @@ export const sharedSocialLinks = {
   linktree: "https://linktr.ee/anamartinsr",
 };
 
+export const sharedSocialAria = {
+  github: { pt: "Abrir GitHub", en: "Open GitHub" },
+  linkedin: { pt: "Abrir LinkedIn", en: "Open LinkedIn" },
+  tiktok: { pt: "Abrir TikTok", en: "Open TikTok" },
+  instagram: { pt: "Abrir Instagram", en: "Open Instagram" },
+};
+
 const sharedTechCategories = [
   {
     title: { pt: "Backend", en: "Backend" },
@@ -369,13 +376,12 @@ export const contentByLanguage = {
       toggleThemeAltTitle: "Modo escuro",
       openMenuAriaLabel: "Abrir menu",
       closeMenuAriaLabel: "Fechar menu",
-      switchLanguageLabel: "EN",
       switchLanguageAriaLabel: "Trocar para inglês",
     },
     hero: {
-      introBadge: { top: "HELLO", bottom: "I'm" },
+      introBadge: { top: "OLÁ", bottom: "Eu sou" },
       name: "Ana Martins",
-      focusSentence: "Software Developer",
+      focusSentence: "Desenvolvedora de Software",
       cta: "Ver Projetos",
       scrollLabel: "Ver mais",
     },
@@ -531,7 +537,6 @@ export const contentByLanguage = {
       toggleThemeAltTitle: "Dark mode",
       openMenuAriaLabel: "Open menu",
       closeMenuAriaLabel: "Close menu",
-      switchLanguageLabel: "PT",
       switchLanguageAriaLabel: "Switch to Portuguese",
     },
     hero: {
