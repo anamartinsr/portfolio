@@ -23,7 +23,12 @@ export default function HeaderSwitches({
       <button
         onClick={toggleLanguage}
         className="relative h-7 w-14 cursor-pointer overflow-hidden rounded-full bg-gray-200 shadow-inner transition-all duration-300"
-        aria-label={header.switchLanguageAriaLabel}
+        aria-label={
+          isPt ? header.switchLanguageAriaLabel : header.switchLanguageAriaLabel
+        }
+        title={
+          isPt ? header.switchLanguageAriaLabel : header.switchLanguageAriaLabel
+        }
       >
         <div
           className="absolute inset-0 bg-cover bg-center opacity-90 transition-all duration-300"
