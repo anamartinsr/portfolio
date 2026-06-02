@@ -1,18 +1,29 @@
+import { Github, Instagram, Linkedin, Mail, MapPin } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
+import { SiTiktok } from "react-icons/si";
+
 import Tecnologym from "../assets/tecnologym.png";
 import UrlShortener from "../assets/url_shortener.png";
 import DocuSend from "../assets/docusend.png";
 import DocusendIntegration from "../assets/docusend_integration.png";
 import PortfolioComercial from "../assets/portfolio_comercial.png";
-import { Linkedin, Mail, MapPin } from "lucide-react";
 
 export const sharedSocialLinks = {
   tiktok: "https://www.tiktok.com/@anamartins.dev",
   github: "https://github.com/anamartinsr",
-  linkedin: "https://linkedin.com/in/anamartinsr/",
+  linkedin: "https://linkedin.com/in/anamartinsr",
   instagram: "https://www.instagram.com/anamartins.dev",
   x: "https://x.com/anamartinsdev",
   linktree: "https://linktr.ee/anamartinsr",
 };
+
+export const socialLinks = [
+  { name: "GitHub", url: sharedSocialLinks.github, icon: Github },
+  { name: "LinkedIn", url: sharedSocialLinks.linkedin, icon: Linkedin },
+  { name: "TikTok", url: sharedSocialLinks.tiktok, icon: SiTiktok },
+  { name: "Instagram", url: sharedSocialLinks.instagram, icon: Instagram },
+  { name: "X", url: sharedSocialLinks.x, icon: FaXTwitter },
+];
 
 export const sharedSocialAria = {
   github: { pt: "Abrir GitHub", en: "Open GitHub" },
@@ -271,6 +282,10 @@ const sharedContentCreator = {
     pt: "Compartilho tutoriais e boas práticas para ajudar pessoas que estão evoluindo na área de tecnologia.",
     en: "I share tutorials and best practices to help people growing in tech.",
   },
+  subDescription: {
+    pt: "Minhas redes sociais",
+    en: "My social media",
+  },
   communityMockup: {
     title: { pt: "Comunidade", en: "Community" },
     tabActive: { pt: "Novas", en: "Newsfeed" },
@@ -431,6 +446,7 @@ export const contentByLanguage = {
       heading: sharedContentCreator.heading.pt,
       highlight: sharedContentCreator.highlight.pt,
       description: sharedContentCreator.description.pt,
+      subDescription: sharedContentCreator.subDescription.pt,
       communityMockup: {
         title: sharedContentCreator.communityMockup.title.pt,
         tabActive: sharedContentCreator.communityMockup.tabActive.pt,
@@ -617,6 +633,7 @@ export const contentByLanguage = {
       heading: sharedContentCreator.heading.en,
       highlight: sharedContentCreator.highlight.en,
       description: sharedContentCreator.description.en,
+      subDescription: sharedContentCreator.subDescription.en,
       communityMockup: {
         title: sharedContentCreator.communityMockup.title.en,
         tabActive: sharedContentCreator.communityMockup.tabActive.en,

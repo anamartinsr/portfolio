@@ -2,8 +2,9 @@ import CreatorPhoneMockup from "./CreatorPhoneMockup";
 import CreatorFloatingIcons from "./CreatorFloatingIcons";
 import FloatingCards from "./FloatingCards";
 import Title from "../../ui/Title";
-import { getLanguageContent } from "../../../data/content";
+import { getLanguageContent, socialLinks } from "../../../data/content";
 import { useLanguage } from "../../../context/useLanguage";
+import Social from "./Social";
 
 export default function ContentCreator() {
   const { language } = useLanguage();
@@ -36,6 +37,12 @@ export default function ContentCreator() {
             description={contentCreator.description}
             align="left"
           />
+          <div className="mt-4 text-center">
+            <p className="text-[color:var(--color-text-muted)]">
+              {contentCreator.subDescription}
+            </p>
+            <Social socialLinks={socialLinks} />
+          </div>
         </div>
       </div>
     </section>
